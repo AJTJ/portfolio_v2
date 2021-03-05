@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
+import Portfolio from "./Portfolio";
+import { ThemeProvider } from "@emotion/react";
+import { theme, Global } from "./theme";
 
-const App = props => {
+const App = (props) => {
   return (
-    <>
-      <div>Aaron Janke</div>
-      <div>Intro of me</div>
-      <div>Skills web</div>
-      <div>Interactive projects</div>
-      <div>online projects</div>
-      <div>contact information</div>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <Global />
+      <Portfolio />
+    </ThemeProvider>
+  );
 };
 
 export default App;
