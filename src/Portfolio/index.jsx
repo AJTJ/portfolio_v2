@@ -17,6 +17,7 @@ const Portfolio = () => {
       <div>Live Chat</div>
       <div>Projects</div>
       <div>Contact</div>
+      <div>Something</div>
     </PortfolioContainer>
   );
 };
