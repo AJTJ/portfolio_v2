@@ -23,7 +23,6 @@ const First = styled(NavButton)`
 
 const Nav = () => {
   return (
-    // <MarginedContainer>
     <NavWrapper>
       <NavContainer>
         <First>About</First>
@@ -32,7 +31,6 @@ const Nav = () => {
         <NavButton>Contact</NavButton>
       </NavContainer>
     </NavWrapper>
-    // </MarginedContainer>
   );
 };
 
