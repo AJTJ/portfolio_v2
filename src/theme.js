@@ -17,16 +17,6 @@ export const Global = () => (
       * {
         box-sizing: border-box;
       }
-      html {
-        @font-face {
-          font-family: Noto Sans;
-          src: url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap");
-        }
-        @font-face {
-          font-family: Poppins;
-          src: url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
-        }
-      }
       body {
         margin: 0;
         a {

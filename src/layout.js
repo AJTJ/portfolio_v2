@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styled from "@emotion/styled";
 
 export const Grid = styled.div`
@@ -12,3 +12,5 @@ export const MarginedContainer = styled(Grid)`
   max-width: 1060px;
   /* padding: 0 10px; */
 `;
+
+export const zNav = 50;
