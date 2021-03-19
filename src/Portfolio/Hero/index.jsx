@@ -23,7 +23,7 @@ const BackgroundCircle = styled.div`
   background: ${(p) => p.theme.colors.color_1};
   border-radius: 50%;
   z-index: -50;
-  box-shadow: 15px -16px 15px 15px #e1d4d4;
+  box-shadow: 55px -20px 300px 55px ${(p) => p.theme.colors.color_1};
 `;
 
 const HeroContainer = styled.div`
@@ -89,7 +89,7 @@ const Hero = () => {
       </NameContainer>
       <MarginedContainer>
         <Title>
-          Full-Stack Developer, Infrastructure Engineer and Creative Coder
+          Full-Stack Developer, Infrastructure Engineer and Creative Coder.
         </Title>
       </MarginedContainer>
       <CircleContainer>

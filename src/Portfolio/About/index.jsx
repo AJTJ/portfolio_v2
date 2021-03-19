@@ -6,24 +6,43 @@ import rust from "./icons/rust_logo.png";
 const AboutWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_2};
   /* background: color_1; */
+  padding: 30px 0;
 `;
 
 const Text = styled.div`
   font-size: 20px;
+  grid-column-start: 2;
+  grid-column-end: 11;
 `;
 
-const SkillsTitle = styled.div``;
+const SecondSection = styled.div`
+  grid-column-start: 2;
+  font-size: 60px;
+`;
+
+const SkillsList = styled.div`
+  grid-column: span 6;
+`;
+const IconCircle = styled.div`
+  grid-column: span 6;
+`;
 
 const About = () => {
   return (
     <AboutWrapper>
       <MarginedContainer>
-        <SkillsTitle>Skills</SkillsTitle>
+        <SecondSection>About</SecondSection>
         <Text>
           Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
-          engineer and creative code enthusiast. Here are some of my development
-          projects and explorations.
+          engineer and creative code enthusiast.
         </Text>
+        <Text>
+          Inspired and multifaceted, I enjoy digging into the full scope of the
+          development process. I have a deep interest in scalable, concurrent
+          solutions.
+        </Text>
+        <SkillsList>Some Skills here</SkillsList>
+        <IconCircle>Circle of Icons Here</IconCircle>
       </MarginedContainer>
     </AboutWrapper>
   );
