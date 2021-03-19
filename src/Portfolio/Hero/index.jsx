@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import styled from "@emotion/styled";
 import { MarginedContainer } from "../../layout";
-import img from "./rust.svg";
+import rust from "./icons/rust_logo.png";
 
 const circleSize = "970";
 
@@ -20,9 +20,10 @@ const BackgroundCircle = styled.div`
     p?.extra
       ? `calc(${circleSize}px + calc(${p.extra}px * 10))`
       : `${circleSize}px`};
-  background: ${(p) => p.theme.colors.yellow};
+  background: ${(p) => p.theme.colors.color_1};
   border-radius: 50%;
   z-index: -50;
+  box-shadow: 15px -16px 15px 15px #e1d4d4;
 `;
 
 const HeroContainer = styled.div`
@@ -41,17 +42,18 @@ const Name = styled.div`
   padding-top: 150px;
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
+  color: ${(p) => p.theme.colors.color_3};
 `;
 
 const Title = styled.div`
-  grid-column-start: 8;
-  grid-column-end: 13;
+  grid-column-start: 3;
+  grid-column-end: 10;
+  font-size: 25px;
 `;
 
 const ImgContainer = styled.div`
   height: 100px;
   width: 100px;
-  /* background: red; */
 `;
 
 const Hero = () => {
@@ -71,10 +73,11 @@ const Hero = () => {
     <HeroContainer>
       <MarginedContainer>
         <Name>Aaron Janke</Name>
-        <Title>Web Developer</Title>
-        <ImgContainer>
-          <img src={img} alt="" />
-        </ImgContainer>
+        <Title>
+          Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
+          engineer and creative code enthusiast.
+        </Title>
+        <ImgContainer>{/* <img src={rust} alt="" /> */}</ImgContainer>
       </MarginedContainer>
       <CircleContainer>
         <BackgroundCircle extra={scrollPosition} />

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Hero from "./Hero";
 import Nav from "./Nav";
+import About from "./About";
 
 const PortfolioContainer = styled.div`
   min-height: 5000px;
@@ -13,11 +14,10 @@ const Portfolio = () => {
     <PortfolioContainer>
       <Nav />
       <Hero />
-      <div>Skills</div>
+      <About />
       <div>Live Chat</div>
       <div>Projects</div>
       <div>Contact</div>
-      <div>Something</div>
     </PortfolioContainer>
   );
 };
