@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import styled from "@emotion/styled";
 import { MarginedContainer } from "../../layout";
-import rust from "./icons/rust_logo.png";
+import headshot from "../../assets/linked_img.jpeg";
 
 const circleSize = "970";
 
@@ -35,25 +35,35 @@ const HeroContainer = styled.div`
 
 const CircleContainer = styled.div``;
 
+const NameContainer = styled(MarginedContainer)`
+  align-items: center;
+  padding-top: 200px;
+`;
+
 const Name = styled.div`
   font-size: 100px;
-  grid-column-start: 3;
-  grid-column-end: 13;
-  padding-top: 150px;
+  grid-column-start: 2;
+  grid-column-end: 9;
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   color: ${(p) => p.theme.colors.color_3};
 `;
 
-const Title = styled.div`
-  grid-column-start: 3;
-  grid-column-end: 10;
-  font-size: 25px;
+const ImgContainer = styled.div`
+  grid-column: span 3;
 `;
 
-const ImgContainer = styled.div`
-  height: 100px;
-  width: 100px;
+const FaceImg = styled.img`
+  /* height: 100%; */
+  width: 100%;
+  border-radius: 50%;
+  max-width: 250px;
+`;
+
+const Title = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 11;
+  font-size: 25px;
 `;
 
 const Hero = () => {
@@ -71,13 +81,16 @@ const Hero = () => {
   console.log(scrollPosition);
   return (
     <HeroContainer>
-      <MarginedContainer>
+      <NameContainer>
         <Name>Aaron Janke</Name>
+        <ImgContainer>
+          <FaceImg src={headshot} alt="" />
+        </ImgContainer>
+      </NameContainer>
+      <MarginedContainer>
         <Title>
-          Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
-          engineer and creative code enthusiast.
+          Full-Stack Developer, Infrastructure Engineer and Creative Coder
         </Title>
-        <ImgContainer>{/* <img src={rust} alt="" /> */}</ImgContainer>
       </MarginedContainer>
       <CircleContainer>
         <BackgroundCircle extra={scrollPosition} />

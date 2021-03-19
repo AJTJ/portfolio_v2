@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { MarginedContainer } from "../../layout";
+import rust from "./icons/rust_logo.png";
 
 const AboutWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_2};
