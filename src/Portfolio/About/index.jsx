@@ -27,6 +27,8 @@ const IconCircle = styled.div`
   grid-column: span 6;
 `;
 
+// some changes
+
 const About = () => {
   return (
     <AboutWrapper>
