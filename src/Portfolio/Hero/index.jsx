@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { MarginedContainer } from "../../layout";
 import headshot from "../../assets/linked_img.jpeg";
 
-const circleSize = "970";
+const circleSize = "900";
 
 const BackgroundCircle = styled.div`
   position: absolute;
@@ -66,19 +66,7 @@ const Title = styled.div`
   font-size: 25px;
 `;
 
-const Hero = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
-  console.log(scrollPosition);
+const Hero = ({ scrollPosition }) => {
   return (
     <HeroContainer>
       <NameContainer>
