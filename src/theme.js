@@ -1,6 +1,39 @@
 import React from "react";
-
+import facepaint from "facepaint";
 import { Global as EmoGlobal, css } from "@emotion/react";
+
+// MQ EXAMPLES
+// ${mq[1]} {
+//   display: none;
+// }
+// import { mq } from "../../theme";
+
+// ${mq[3]} {
+//   font-size: 65px;
+// }
+// ${mq[2]} {
+//   font-size: 50px;
+// }
+// ${mq[1]} {
+//   font-size: 30px;
+// }
+// ${mq[0]} {
+//   font-size: 20px;
+// }
+
+const bps = ["400", "600", "800", "1060"];
+
+export const mq = bps.map((bp) => `@media (max-width: ${bp}px)`);
+export const mqMin = bps.map((bp) => `@media (min-width: ${bp}px)`);
+
+export const mqO = facepaint([
+  `@media(max-width: ${bps[3]}px)`,
+  `@media(max-width: ${bps[2]}px)`,
+  `@media(max-width: ${bps[1]}px)`,
+  `@media(max-width: ${bps[0]}px)`,
+]);
+
+export const mqNew = (bp) => `@media (max-width: ${bp}px)`;
 
 export const theme = {
   colors: {
