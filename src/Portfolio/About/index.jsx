@@ -9,6 +9,7 @@ import node from "./icons/node.png";
 import kube from "./icons/kube.png";
 import docker from "./icons/docker.png";
 import js from "./icons/js.png";
+import ellipsis from "./icons/ellipsis.png";
 
 // import { Fade } from "react-awesome-reveal";
 
@@ -38,10 +39,12 @@ const IconCircleContainer = styled.div`
 const Circle = styled.div`
   width: 24px;
   height: 300px;
-  margin-left: 150px;
+  margin-left: 200px;
   /* position: absolute; */
   /* left: 50%; */
   /* top: 50px; */
+  -webkit-transform: rotate(${(p) => p.scrollPosition / 10}deg);
+  -ms-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   transform: rotate(${(p) => p.scrollPosition / 10}deg);
   /* &:before {
     content: "";
@@ -53,11 +56,11 @@ const Circle = styled.div`
   } */
 `;
 
-const itemRotation = `40deg`;
+const itemRotation = `36deg`;
 
 const InnerDiv = styled.div`
   width: 24px;
-  height: 350px;
+  height: 390px;
   position: absolute;
   left: 50%;
   top: 50px;
@@ -102,6 +105,9 @@ const IconCircle = ({ scrollPosition }) => {
                         <InnerImg src={actix} alt="" />
                         <InnerDiv>
                           <InnerImg src={js} alt="" />
+                          <InnerDiv>
+                            <InnerImg src={ellipsis} alt="" />
+                          </InnerDiv>
                         </InnerDiv>
                       </InnerDiv>
                     </InnerDiv>

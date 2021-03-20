@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import { MarginedContainer } from "../../layout";
 import headshot from "../../assets/linked_img.jpeg";
 
-const circleSize = "900";
+const circleSize = "850";
 
 const BackgroundCircle = styled.div`
   position: absolute;
