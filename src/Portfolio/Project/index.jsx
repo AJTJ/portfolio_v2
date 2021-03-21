@@ -1,12 +1,123 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { MarginedContainer, SectionTitle } from "../layout";
+import linkedImg from "../assets/linked_img.jpeg";
+import github from "../assets/github.png";
 
-const ProjectContainer = styled.div`
-  height: 800px;
+const ProjectWrapper = styled.div`
+  background: ${(p) => (p.reversed ? "white" : p.theme.colors.color_1)};
+  padding: 20px 0;
 `;
 
-const Project = () => {
-  return <ProjectContainer>This is a project</ProjectContainer>;
+const ProjectContainer = styled(MarginedContainer)`
+  /* height: 800px; */
+  /* display: flex; */
+  /* align-items: center; */
+`;
+
+const ProjectImgContainer = styled.div`
+  grid-column: span 4;
+  order: 1;
+  img {
+    width: 100%;
+    border-radius: 100%;
+  }
+`;
+
+const ProjectCopyWrapper = styled.div`
+  grid-column: span 8;
+  order: ${(p) => (p.reversed ? -1 : 2)};
+  display: flex;
+  align-items: center;
+`;
+
+const ProjectCopyLinks = styled.div`
+  border: ${(p) => (p.reversed ? p.theme.colors.color_1 : "white")} 2px solid;
+  border-radius: 3px;
+  width: 100%;
+  position: relative;
+  top: 20px;
+  right: ${(p) => (p.reversed ? "-100px" : "100px")};
+  background: ${(p) => (p.reversed ? "white" : p.theme.colors.color_1)};
+  padding: 50px;
+`;
+
+const ProjectLinks = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Link = styled.a`
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+
+  img {
+    width: 100%;
+  }
+`;
+
+const ProjTitleContainer = styled.p`
+  font-weight: bold;
+`;
+
+const Project = ({
+  reversed,
+  ghLink,
+  liveLink,
+  projImg,
+  projCopy,
+  projTitle,
+}) => {
+  return (
+    <ProjectWrapper {...{ reversed }}>
+      <ProjectContainer>
+        <ProjectImgContainer>
+          <img src={projImg || linkedImg} alt="" />
+        </ProjectImgContainer>
+        <ProjectCopyWrapper {...{ reversed }}>
+          <ProjectCopyLinks {...{ reversed }}>
+            <ProjTitleContainer>
+              {projTitle || "Project Title"}
+            </ProjTitleContainer>
+            <p>{projCopy || "A bunch of copy about the project"}</p>
+            <ProjectLinks>
+              {ghLink && (
+                <Link href={ghLink}>
+                  <img src={github} alt="" />
+                </Link>
+              )}
+              {liveLink && (
+                <Link href={liveLink}>
+                  <img src={github} alt="" />
+                </Link>
+              )}
+            </ProjectLinks>
+          </ProjectCopyLinks>
+        </ProjectCopyWrapper>
+      </ProjectContainer>
+    </ProjectWrapper>
+  );
+};
+
+const ProjectsTitleWrapper = styled.div`
+  background: ${(p) => p.theme.colors.color_1};
+`;
+
+const ProjectsTitleStyled = styled(SectionTitle)`
+  grid-column-start: 6;
+  grid-column-end: 12;
+`;
+
+export const ProjectsTitle = () => {
+  return (
+    <ProjectsTitleWrapper>
+      <MarginedContainer>
+        <ProjectsTitleStyled>Projects</ProjectsTitleStyled>
+      </MarginedContainer>
+    </ProjectsTitleWrapper>
+  );
 };
 
 export default Project;

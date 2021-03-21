@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, zNav } from "../../layout";
-import linked from "../../assets/linked.png";
-import github from "../../assets/github.png";
+import { MarginedContainer, zNav } from "../layout";
+import linked from "../assets/linked.png";
+import github from "../assets/github.png";
 
 const NavWrapper = styled.div`
   position: fixed;

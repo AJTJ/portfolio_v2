@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import styled from "@emotion/styled";
-import { MarginedContainer } from "../../layout";
-import headshot from "../../assets/linked_img.jpeg";
+import { MarginedContainer } from "../layout";
+import headshot from "../assets/linked_img.jpeg";
 
 const circleSize = "850";
 

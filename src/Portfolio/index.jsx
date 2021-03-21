@@ -3,15 +3,15 @@ import styled from "@emotion/styled";
 import Hero from "./Hero";
 import Nav from "./Nav";
 import About from "./About";
-import Project from "./Project";
+import Project, { ProjectsTitle } from "./Project";
+import Contact from "./Contact";
+import LiveChat from "./LiveChat";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
   overflow: hidden;
   -moz-transform: rotate(0.02deg);
 `;
-
-//
 
 const Portfolio = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -30,9 +30,11 @@ const Portfolio = () => {
       <Nav />
       <Hero {...{ scrollPosition }} />
       <About {...{ scrollPosition }} />
+      <ProjectsTitle />
       <Project />
-      <div>Live Chat</div>
-      <div>Contact</div>
+      <Project reversed />
+      <LiveChat />
+      <Contact />
     </PortfolioContainer>
   );
 };

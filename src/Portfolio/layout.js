@@ -18,4 +18,12 @@ export const MarginedContainer = styled(Grid)`
   }
 `;
 
+export const SectionTitle = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 9;
+  font-size: 60px;
+  color: ${(p) => p.theme.colors.color_3};
+  padding-top: 30px;
+`;
+
 export const zNav = 50;
