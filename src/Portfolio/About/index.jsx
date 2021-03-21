@@ -29,6 +29,7 @@ const Text = styled.div`
 const SecondSection = styled.div`
   grid-column-start: 2;
   font-size: 60px;
+  color: ${(p) => p.theme.colors.color_3};
 `;
 
 const IconCircleContainer = styled.div`
@@ -57,7 +58,7 @@ const Circle = styled.div`
 `;
 
 const itemRotation = `36deg`;
-
+//
 const InnerDiv = styled.div`
   width: 24px;
   height: 390px;
@@ -123,7 +124,7 @@ const IconCircle = ({ scrollPosition }) => {
 };
 
 const SkillsList = styled.div`
-  padding-top: 30px;
+  padding-top: 10px;
   grid-column-start: 3;
   grid-column-end: 7;
   position: relative;
@@ -133,7 +134,7 @@ const SkillsList = styled.div`
 
 const SkillGroup = styled.div`
   width: 100%;
-  color: black;
+  /* color: black; */
 `;
 
 const Skill = styled.div`
@@ -144,48 +145,60 @@ const Skill = styled.div`
 const SkillSection = styled.div`
   font-size: 20px;
   font-weight: bold;
+  color: ${(p) => p.theme.colors.color_3};
+`;
+
+const SkillsWrapper = styled.div`
+  /* background: ${(p) => p.theme.colors.color_1}; */
 `;
 
 const SkillCircleContainer = styled(MarginedContainer)`
-  padding: 50px 0;
+  padding: 100px 0;
 `;
 
 const About = ({ scrollPosition }) => {
   return (
-    <AboutWrapper>
-      <MarginedContainer>
-        <SecondSection>About</SecondSection>
-        <Text>
-          Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
-          engineer and creative code enthusiast.
-        </Text>
-        <Text>
-          Inspired and multifaceted, I enjoy digging into the full scope of the
-          development process. I have a deep interest in scalable, concurrent
-          solutions.
-        </Text>
-      </MarginedContainer>
-      <SkillCircleContainer>
-        <SkillsList>
-          <SkillGroup>
-            <SkillSection>Javascript</SkillSection>
-            <Skill>React</Skill>
-            <Skill>Node</Skill>
-          </SkillGroup>
-          <SkillGroup>
-            <SkillSection>Rust</SkillSection>
-            <Skill>Actix-Web</Skill>
-            <Skill>WASM</Skill>
-          </SkillGroup>
-          <SkillGroup>
-            <SkillSection>Infrastructure</SkillSection>
-            <Skill>Kubernetes</Skill>
-            <Skill>Docker</Skill>
-          </SkillGroup>
-        </SkillsList>
-        <IconCircle {...{ scrollPosition }} />
-      </SkillCircleContainer>
-    </AboutWrapper>
+    <>
+      <AboutWrapper>
+        <MarginedContainer>
+          <SecondSection>About</SecondSection>
+          <Text>
+            Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
+            engineer and creative code enthusiast.
+          </Text>
+          <Text>
+            Inspired and constantly learning, I enjoy digging into the full
+            scope of a project. I have a deep interest in scalable, concurrent
+            solutions.
+          </Text>
+        </MarginedContainer>
+      </AboutWrapper>
+      <SkillsWrapper>
+        <MarginedContainer>
+          <SecondSection>Skills</SecondSection>
+        </MarginedContainer>
+        <SkillCircleContainer>
+          <SkillsList>
+            <SkillGroup>
+              <SkillSection>Javascript</SkillSection>
+              <Skill>React</Skill>
+              <Skill>Node</Skill>
+            </SkillGroup>
+            <SkillGroup>
+              <SkillSection>Rust</SkillSection>
+              <Skill>Actix-Web</Skill>
+              <Skill>WASM</Skill>
+            </SkillGroup>
+            <SkillGroup>
+              <SkillSection>Infrastructure</SkillSection>
+              <Skill>Kubernetes</Skill>
+              <Skill>Docker</Skill>
+            </SkillGroup>
+          </SkillsList>
+          <IconCircle {...{ scrollPosition }} />
+        </SkillCircleContainer>
+      </SkillsWrapper>
+    </>
   );
 };
 

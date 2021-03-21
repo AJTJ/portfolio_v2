@@ -18,7 +18,7 @@ const NavContainer = styled(MarginedContainer)`
 const NavButton = styled.button`
   height: 30px;
   width: 60px;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 1);
   border-radius: 17px;
   border: solid 1px ${(p) => p.theme.colors.color_3};
   &:hover {

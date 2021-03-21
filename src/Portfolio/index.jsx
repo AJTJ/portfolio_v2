@@ -8,7 +8,10 @@ import Project from "./Project";
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
   overflow: hidden;
+  -moz-transform: rotate(0.02deg);
 `;
+
+//
 
 const Portfolio = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
