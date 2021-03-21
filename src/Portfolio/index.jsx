@@ -12,7 +12,7 @@ const PortfolioContainer = styled.div`
   overflow: hidden;
   -moz-transform: rotate(0.02deg);
 `;
-
+//
 const Portfolio = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
