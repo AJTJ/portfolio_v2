@@ -3,9 +3,11 @@ import styled from "@emotion/styled";
 import { MarginedContainer, SectionTitle } from "../layout";
 import linkedImg from "../assets/linked_img.jpeg";
 import github from "../assets/github.png";
+import globe from "../assets/globe.png";
 
 const ProjectWrapper = styled.div`
-  background: ${(p) => (p.reversed ? "white" : p.theme.colors.color_1)};
+  background: ${(p) =>
+    p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
   padding: 20px 0;
 `;
 
@@ -13,6 +15,7 @@ const ProjectContainer = styled(MarginedContainer)`
   /* height: 800px; */
   /* display: flex; */
   /* align-items: center; */
+  padding: 30px 0;
 `;
 
 const ProjectImgContainer = styled.div`
@@ -38,7 +41,8 @@ const ProjectCopyLinks = styled.div`
   position: relative;
   top: 20px;
   right: ${(p) => (p.reversed ? "-100px" : "100px")};
-  background: ${(p) => (p.reversed ? "white" : p.theme.colors.color_1)};
+  background: ${(p) =>
+    p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
   padding: 50px;
 `;
 
@@ -90,7 +94,7 @@ const Project = ({
               )}
               {liveLink && (
                 <Link href={liveLink}>
-                  <img src={github} alt="" />
+                  <img src={globe} alt="" />
                 </Link>
               )}
             </ProjectLinks>

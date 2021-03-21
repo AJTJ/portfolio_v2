@@ -12,6 +12,7 @@ import kube from "./icons/kube.png";
 import docker from "./icons/docker.png";
 import js from "./icons/js.png";
 import ellipsis from "./icons/ellipsis.png";
+import three from "./icons/three.png";
 
 // import { Fade } from "react-awesome-reveal";
 
@@ -37,7 +38,7 @@ const IconCircleGuide = styled.div`
   width: 24px;
   height: 300px;
   /* margin-left: 200px; */
-  position: absolute;
+  position: relative;
   left: 50%;
   /* top: 50px; */
   -webkit-transform: rotate(${(p) => p.scrollPosition / 10}deg);
@@ -109,7 +110,7 @@ const IconCircle = ({ scrollPosition }) => {
                     <InnerDiv>
                       <InnerImg src={docker} alt="" />
                       <InnerDiv>
-                        <InnerImg src={actix} alt="" />
+                        <InnerImg src={three} alt="" />
                         <InnerDiv>
                           <InnerImg src={js} alt="" />
                           <InnerDiv>
@@ -131,32 +132,34 @@ const IconCircle = ({ scrollPosition }) => {
 
 const SkillsList = styled.div`
   padding-top: 10px;
-  grid-column-start: 3;
-  grid-column-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 6;
   position: relative;
   display: flex;
   flex-wrap: wrap;
 `;
 
 const SkillGroup = styled.div`
-  /* width: 100%; */
+  width: 100%;
   /* color: black; */
 `;
 
-const SkillGroupOneWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding-bottom: 40px;
-`;
+// const SkillGroupOneWrapper = styled.div`
+//   display: flex;
+//   justify-content: space-around;
+//   width: 100%;
+//   padding-bottom: 40px;
+// `;
 
 const SkillGroupOne = styled(SkillGroup)`
-  /* padding-left: 50px; */
+  padding-left: 100px;
 `;
 
-const SkillGroupTwo = styled(SkillGroup)``;
+const SkillGroupTwo = styled(SkillGroup)`
+  padding-left: 75px;
+`;
 const SkillGroupThree = styled(SkillGroup)`
-  /* padding-left: 100px; */
+  padding-left: 100px;
 `;
 
 const TwoSkillGroups = styled.div`
@@ -195,10 +198,10 @@ const About = ({ scrollPosition }) => {
             engineer and creative code enthusiast.
           </Text>
           <Text>
-            I enjoy digging into the full scope of a project and I have a
-            passion for scalable, concurrent solutions.
+            I have a passion for architecture and for scalable, concurrent
+            solutions.
           </Text>
-          <Text>Here are some things I'm digging into.</Text>
+          <Text>These are some tools I enjoy working with.</Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
@@ -207,25 +210,25 @@ const About = ({ scrollPosition }) => {
         </MarginedContainer>
         <SkillCircleContainer>
           <SkillsList>
-            <SkillGroupOneWrapper>
-              <SkillGroupOne>
-                <SkillSection>Javascript</SkillSection>
-                <Skill>React</Skill>
-                <Skill>Node</Skill>
-              </SkillGroupOne>
-            </SkillGroupOneWrapper>
-            <TwoSkillGroups>
-              <SkillGroupTwo>
-                <SkillSection>Rust</SkillSection>
-                <Skill>Actix-Web</Skill>
-                <Skill>WASM</Skill>
-              </SkillGroupTwo>
-              <SkillGroupThree>
-                <SkillSection>Infrastructure</SkillSection>
-                <Skill>Kubernetes</Skill>
-                <Skill>Docker</Skill>
-              </SkillGroupThree>
-            </TwoSkillGroups>
+            {/* <SkillGroupOneWrapper> */}
+            <SkillGroupOne>
+              <SkillSection>Javascript</SkillSection>
+              <Skill>React</Skill>
+              <Skill>Node</Skill>
+            </SkillGroupOne>
+            {/* </SkillGroupOneWrapper> */}
+            {/* <TwoSkillGroups> */}
+            <SkillGroupTwo>
+              <SkillSection>Rust</SkillSection>
+              <Skill>Actix-Web</Skill>
+              <Skill>WASM</Skill>
+            </SkillGroupTwo>
+            <SkillGroupThree>
+              <SkillSection>Infrastructure</SkillSection>
+              <Skill>Kubernetes</Skill>
+              <Skill>Docker</Skill>
+            </SkillGroupThree>
+            {/* </TwoSkillGroups> */}
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
         </SkillCircleContainer>

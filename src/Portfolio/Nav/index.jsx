@@ -7,8 +7,11 @@ import github from "../assets/github.png";
 const NavWrapper = styled.div`
   position: fixed;
   width: 100%;
-  height: 40px;
+  height: 50px;
   z-index: ${zNav};
+  transition: all 1s;
+  background: ${(p) =>
+    p.scrollPosition > 250 ? p.theme.colors.color_1 : "transparent"};
 `;
 
 const NavContainer = styled(MarginedContainer)`
@@ -20,7 +23,10 @@ const NavButton = styled.button`
   width: 60px;
   background: rgba(255, 255, 255, 1);
   border-radius: 17px;
-  border: solid 1px ${(p) => p.theme.colors.color_3};
+  border: solid 1px ${(p) => p.theme.colors.color_4};
+  transition: all 0.2s;
+  cursor: pointer;
+  align-self: center;
   &:hover {
     color: white;
     background: ${(p) => p.theme.colors.color_3};
@@ -44,9 +50,9 @@ const LinkImgContainer = styled.a`
   display: flex;
 `;
 
-const Nav = () => {
+const Nav = ({ scrollPosition }) => {
   return (
-    <NavWrapper>
+    <NavWrapper {...{ scrollPosition }}>
       <NavContainer>
         <First>About</First>
         <NavButton>Skills</NavButton>

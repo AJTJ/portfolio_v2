@@ -45,6 +45,8 @@ export const theme = {
     //old color_2: "#9D8DF1",
     // the dark purple
     color_3: "#381D2A",
+    // a lighter grey
+    color_4: "#f0f0f0",
     orange: "#F6511D",
   },
 };

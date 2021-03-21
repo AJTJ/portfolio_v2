@@ -27,10 +27,12 @@ const Portfolio = () => {
   });
   return (
     <PortfolioContainer>
-      <Nav />
+      <Nav {...{ scrollPosition }} />
       <Hero {...{ scrollPosition }} />
       <About {...{ scrollPosition }} />
       <ProjectsTitle />
+      <Project />
+      <Project reversed />
       <Project />
       <Project reversed />
       <LiveChat />
