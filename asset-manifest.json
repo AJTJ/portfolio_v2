@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/portfolio_v2/static/js/main.04b93b20.chunk.js",
-    "main.js.map": "/portfolio_v2/static/js/main.04b93b20.chunk.js.map",
+    "main.js": "/portfolio_v2/static/js/main.d428f223.chunk.js",
+    "main.js.map": "/portfolio_v2/static/js/main.d428f223.chunk.js.map",
     "runtime-main.js": "/portfolio_v2/static/js/runtime-main.2914acf5.js",
     "runtime-main.js.map": "/portfolio_v2/static/js/runtime-main.2914acf5.js.map",
     "static/js/2.3cf9b274.chunk.js": "/portfolio_v2/static/js/2.3cf9b274.chunk.js",
     "static/js/2.3cf9b274.chunk.js.map": "/portfolio_v2/static/js/2.3cf9b274.chunk.js.map",
     "index.html": "/portfolio_v2/index.html",
-    "precache-manifest.a1e59732281b5914143d089e0647b82b.js": "/portfolio_v2/precache-manifest.a1e59732281b5914143d089e0647b82b.js",
+    "precache-manifest.47f5e9d7586e69cbe52059353b7fee93.js": "/portfolio_v2/precache-manifest.47f5e9d7586e69cbe52059353b7fee93.js",
     "service-worker.js": "/portfolio_v2/service-worker.js",
     "static/js/2.3cf9b274.chunk.js.LICENSE.txt": "/portfolio_v2/static/js/2.3cf9b274.chunk.js.LICENSE.txt",
     "static/media/actix_logo.png": "/portfolio_v2/static/media/actix_logo.a4ca6efb.png",
@@ -22,6 +22,6 @@
   "entrypoints": [
     "static/js/runtime-main.2914acf5.js",
     "static/js/2.3cf9b274.chunk.js",
-    "static/js/main.04b93b20.chunk.js"
+    "static/js/main.d428f223.chunk.js"
   ]
 }
