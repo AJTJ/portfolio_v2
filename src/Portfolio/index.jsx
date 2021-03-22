@@ -6,6 +6,14 @@ import About from "./About";
 import Project, { ProjectsTitle } from "./Project";
 import Contact from "./Contact";
 import LiveChat from "./LiveChat";
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
@@ -20,6 +28,7 @@ const Portfolio = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
+  //
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -29,14 +38,20 @@ const Portfolio = () => {
     <PortfolioContainer>
       <Nav {...{ scrollPosition }} />
       <Hero {...{ scrollPosition }} />
-      <About {...{ scrollPosition }} />
-      <ProjectsTitle />
+      <Element name="about">
+        <About {...{ scrollPosition }} />
+      </Element>
+      <Element name="projects">
+        <ProjectsTitle />
+      </Element>
       <Project liveLink={"www.google.com"} ghLink={"www.google.com"} />
       <Project reversed />
       <Project />
       <Project reversed />
       <LiveChat />
-      <Contact />
+      <Element name="contact">
+        <Contact />
+      </Element>
     </PortfolioContainer>
   );
 };
