@@ -31,7 +31,7 @@ const Portfolio = () => {
       <Hero {...{ scrollPosition }} />
       <About {...{ scrollPosition }} />
       <ProjectsTitle />
-      <Project />
+      <Project liveLink={"www.google.com"} ghLink={"www.google.com"} />
       <Project reversed />
       <Project />
       <Project reversed />
