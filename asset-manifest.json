@@ -1,27 +1,29 @@
 {
   "files": {
-    "main.js": "/portfolio_v2/static/js/main.d428f223.chunk.js",
-    "main.js.map": "/portfolio_v2/static/js/main.d428f223.chunk.js.map",
+    "main.js": "/portfolio_v2/static/js/main.6f202fed.chunk.js",
+    "main.js.map": "/portfolio_v2/static/js/main.6f202fed.chunk.js.map",
     "runtime-main.js": "/portfolio_v2/static/js/runtime-main.2914acf5.js",
     "runtime-main.js.map": "/portfolio_v2/static/js/runtime-main.2914acf5.js.map",
-    "static/js/2.3cf9b274.chunk.js": "/portfolio_v2/static/js/2.3cf9b274.chunk.js",
-    "static/js/2.3cf9b274.chunk.js.map": "/portfolio_v2/static/js/2.3cf9b274.chunk.js.map",
+    "static/js/2.35dd6b75.chunk.js": "/portfolio_v2/static/js/2.35dd6b75.chunk.js",
+    "static/js/2.35dd6b75.chunk.js.map": "/portfolio_v2/static/js/2.35dd6b75.chunk.js.map",
     "index.html": "/portfolio_v2/index.html",
-    "precache-manifest.47f5e9d7586e69cbe52059353b7fee93.js": "/portfolio_v2/precache-manifest.47f5e9d7586e69cbe52059353b7fee93.js",
+    "precache-manifest.26c7f647685d5dce9655d98460b77c49.js": "/portfolio_v2/precache-manifest.26c7f647685d5dce9655d98460b77c49.js",
     "service-worker.js": "/portfolio_v2/service-worker.js",
-    "static/js/2.3cf9b274.chunk.js.LICENSE.txt": "/portfolio_v2/static/js/2.3cf9b274.chunk.js.LICENSE.txt",
+    "static/js/2.35dd6b75.chunk.js.LICENSE.txt": "/portfolio_v2/static/js/2.35dd6b75.chunk.js.LICENSE.txt",
     "static/media/actix_logo.png": "/portfolio_v2/static/media/actix_logo.a4ca6efb.png",
     "static/media/black_wasm.png": "/portfolio_v2/static/media/black_wasm.c8f96af8.png",
+    "static/media/globe.png": "/portfolio_v2/static/media/globe.b278a396.png",
     "static/media/js.png": "/portfolio_v2/static/media/js.a37eeddf.png",
     "static/media/kube.png": "/portfolio_v2/static/media/kube.c4503524.png",
     "static/media/linked_img.jpeg": "/portfolio_v2/static/media/linked_img.03563f7b.jpeg",
     "static/media/node.png": "/portfolio_v2/static/media/node.41cb99a6.png",
     "static/media/react.png": "/portfolio_v2/static/media/react.30dca143.png",
-    "static/media/rust_logo.png": "/portfolio_v2/static/media/rust_logo.7bb33c16.png"
+    "static/media/rust_logo.png": "/portfolio_v2/static/media/rust_logo.7bb33c16.png",
+    "static/media/three.png": "/portfolio_v2/static/media/three.ce4d1ff0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2914acf5.js",
-    "static/js/2.3cf9b274.chunk.js",
-    "static/js/main.d428f223.chunk.js"
+    "static/js/2.35dd6b75.chunk.js",
+    "static/js/main.6f202fed.chunk.js"
   ]
 }
