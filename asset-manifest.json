@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.js": "/portfolio_v2/static/js/main.770ad16d.chunk.js",
-    "main.js.map": "/portfolio_v2/static/js/main.770ad16d.chunk.js.map",
-    "runtime-main.js": "/portfolio_v2/static/js/runtime-main.2914acf5.js",
-    "runtime-main.js.map": "/portfolio_v2/static/js/runtime-main.2914acf5.js.map",
-    "static/js/2.e3b75bee.chunk.js": "/portfolio_v2/static/js/2.e3b75bee.chunk.js",
-    "static/js/2.e3b75bee.chunk.js.map": "/portfolio_v2/static/js/2.e3b75bee.chunk.js.map",
-    "index.html": "/portfolio_v2/index.html",
-    "precache-manifest.584853ef3a87475ff052ef1f135742bb.js": "/portfolio_v2/precache-manifest.584853ef3a87475ff052ef1f135742bb.js",
-    "service-worker.js": "/portfolio_v2/service-worker.js",
-    "static/js/2.e3b75bee.chunk.js.LICENSE.txt": "/portfolio_v2/static/js/2.e3b75bee.chunk.js.LICENSE.txt",
-    "static/media/actix_logo.png": "/portfolio_v2/static/media/actix_logo.a4ca6efb.png",
-    "static/media/black_wasm.png": "/portfolio_v2/static/media/black_wasm.c8f96af8.png",
-    "static/media/globe.png": "/portfolio_v2/static/media/globe.b278a396.png",
-    "static/media/js.png": "/portfolio_v2/static/media/js.a37eeddf.png",
-    "static/media/kube.png": "/portfolio_v2/static/media/kube.c4503524.png",
-    "static/media/linked_img.jpeg": "/portfolio_v2/static/media/linked_img.03563f7b.jpeg",
-    "static/media/node.png": "/portfolio_v2/static/media/node.41cb99a6.png",
-    "static/media/react.png": "/portfolio_v2/static/media/react.30dca143.png",
-    "static/media/rust_logo.png": "/portfolio_v2/static/media/rust_logo.7bb33c16.png",
-    "static/media/three.png": "/portfolio_v2/static/media/three.ce4d1ff0.png"
+    "main.js": "/static/js/main.89d3393b.chunk.js",
+    "main.js.map": "/static/js/main.89d3393b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.38faae8c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.38faae8c.js.map",
+    "static/js/2.e3b75bee.chunk.js": "/static/js/2.e3b75bee.chunk.js",
+    "static/js/2.e3b75bee.chunk.js.map": "/static/js/2.e3b75bee.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.b5516b0783b3e58bf45e92c66abcb4d3.js": "/precache-manifest.b5516b0783b3e58bf45e92c66abcb4d3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.e3b75bee.chunk.js.LICENSE.txt": "/static/js/2.e3b75bee.chunk.js.LICENSE.txt",
+    "static/media/actix_logo.png": "/static/media/actix_logo.a4ca6efb.png",
+    "static/media/black_wasm.png": "/static/media/black_wasm.c8f96af8.png",
+    "static/media/globe.png": "/static/media/globe.b278a396.png",
+    "static/media/js.png": "/static/media/js.a37eeddf.png",
+    "static/media/kube.png": "/static/media/kube.c4503524.png",
+    "static/media/linked_img.jpeg": "/static/media/linked_img.03563f7b.jpeg",
+    "static/media/node.png": "/static/media/node.41cb99a6.png",
+    "static/media/react.png": "/static/media/react.30dca143.png",
+    "static/media/rust_logo.png": "/static/media/rust_logo.7bb33c16.png",
+    "static/media/three.png": "/static/media/three.ce4d1ff0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2914acf5.js",
+    "static/js/runtime-main.38faae8c.js",
     "static/js/2.e3b75bee.chunk.js",
-    "static/js/main.770ad16d.chunk.js"
+    "static/js/main.89d3393b.chunk.js"
   ]
 }
