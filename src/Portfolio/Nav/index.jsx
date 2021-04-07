@@ -20,6 +20,7 @@ const NavWrapper = styled.div`
   transition: all 1s;
   background: ${(p) =>
     p.scrollPosition > 250 ? p.theme.colors.color_1 : "transparent"};
+  border-bottom: 1px solid ${(p) => p.theme.colors.color_1};
 `;
 
 const NavContainer = styled(MarginedContainer)`
@@ -50,6 +51,7 @@ const First = styled(NavButton)`
 
 const LinkImg = styled.img`
   width: 32px;
+  height: 32px;
 `;
 
 const LinkImgFirst = styled(LinkImg)`

@@ -3,27 +3,31 @@ import React, { useRef, useEffect } from "react";
 import styled from "@emotion/styled";
 import { MarginedContainer } from "../layout";
 import headshot from "../assets/linked_img.jpeg";
+// import { isCompositeComponentWithType } from "react-dom/test-utils";
 
 const circleSize = "850";
 
 const BackgroundCircle = styled.div`
   position: absolute;
   left: ${(p) =>
-    `calc( 50% - ${circleSize / 2}px - 50px + calc(-${p?.extra}px * 5) )`};
-  top: ${(p) => `calc( 50% - ${circleSize / 2}px - calc(${p?.extra}px * 5) )`};
+    `calc( 50% - ${circleSize / 2}px - 50px + calc(-${
+      p?.scrollPosition
+    }px * 5) )`};
+  top: ${(p) =>
+    `calc( 50% - ${circleSize / 2}px - calc(${p?.scrollPosition}px * 5) )`};
 
   width: ${(p) =>
-    p?.extra
-      ? `calc(${circleSize}px + calc(${p.extra}px * 10))`
+    p?.scrollPosition
+      ? `calc(${circleSize}px + calc(${p.scrollPosition}px * 10))`
       : `${circleSize}px`};
   height: ${(p) =>
-    p?.extra
-      ? `calc(${circleSize}px + calc(${p.extra}px * 10))`
+    p?.scrollPosition
+      ? `calc(${circleSize}px + calc(${p.scrollPosition}px * 10))`
       : `${circleSize}px`};
   background: ${(p) => p.theme.colors.color_1};
   border-radius: 50%;
   z-index: -50;
-  box-shadow: 55px -20px 300px 55px ${(p) => p.theme.colors.color_1};
+  box-shadow: 55px -20px 100px 70px ${(p) => p.theme.colors.color_1};
 `;
 
 const HeroContainer = styled.div`
@@ -70,17 +74,24 @@ const Hero = ({ scrollPosition }) => {
   const canvasRef = useRef();
   useEffect(() => {
     const canvasObj = canvasRef.current;
-    // console.log({ canvasObj });
     const ctx = canvasObj.getContext("2d");
 
     const draw = ({ startX, startY, len, angle, branchWidth }) => {
+      // if (start === undefined) {
+      //   start = timestamp;
+      // }
+      // const elapsed = timestamp;
+      // console.log({ elapsed });
+
       ctx.lineWidth = branchWidth;
+
+      ctx.shadowBlur = 15;
+      ctx.shadowColor = "rgba(0,0,0,0.8)";
+      ctx.strokeStyle = "green";
+      ctx.fillStyle = "green";
 
       ctx.beginPath();
       ctx.save();
-
-      ctx.strokeStyle = "green";
-      ctx.fillStyle = "green";
 
       ctx.translate(startX, startY);
       ctx.rotate((angle * Math.PI) / 180);
@@ -88,22 +99,19 @@ const Hero = ({ scrollPosition }) => {
       ctx.lineTo(0, -len);
       ctx.stroke();
 
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = "rgba(0,0,0,0.8)";
-
-      console.log({ len });
-
       if (len < 10) {
         ctx.restore();
         return;
       }
 
+      // const timer = setTimeout(() => {
       draw({
         startX: 0,
         startY: -len,
         len: len * 0.8,
         angle: angle - 15,
         branchWidth: branchWidth * 0.8,
+        // timestamp: elapsed,
       });
       draw({
         startX: 0,
@@ -111,11 +119,23 @@ const Hero = ({ scrollPosition }) => {
         len: len * 0.8,
         angle: angle + 15,
         branchWidth: branchWidth * 0.8,
+        // timestamp: elapsed,
       });
+      // }, 1000);
 
       ctx.restore();
+      // return () => clearTimeout(timer);
     };
-    draw({ startX: 400, startY: 600, len: 120, angle: 0, branchWidth: 10 });
+    // window.requestAnimationFrame((timestamp) =>
+    draw({
+      startX: 400,
+      startY: 600,
+      len: 120,
+      angle: 0,
+      branchWidth: 10,
+      // timestamp: timestamp,
+    });
+    // );
   }, []);
 
   return (
@@ -135,7 +155,9 @@ const Hero = ({ scrollPosition }) => {
         <canvas ref={canvasRef} width="1000" height="800" />
       </MarginedContainer>
       <CircleContainer>
-        <BackgroundCircle extra={scrollPosition} />
+        <BackgroundCircle
+          scrollPosition={scrollPosition > 0 ? scrollPosition : 0}
+        />
       </CircleContainer>
     </HeroContainer>
   );
