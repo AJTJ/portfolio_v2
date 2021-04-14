@@ -12,6 +12,8 @@ import {
   scroller,
 } from "react-scroll";
 
+// test
+
 const NavWrapper = styled.div`
   position: fixed;
   width: 100%;
@@ -20,7 +22,10 @@ const NavWrapper = styled.div`
   transition: all 1s;
   background: ${(p) =>
     p.scrollPosition > 250 ? p.theme.colors.color_1 : "transparent"};
-  border-bottom: 1px solid ${(p) => p.theme.colors.color_1};
+  border-bottom: ${(p) =>
+    p.scrollPosition > 250
+      ? "1px solid " + p.theme.colors.color_1
+      : "1px solid transparent"};
 `;
 
 const NavContainer = styled(MarginedContainer)`

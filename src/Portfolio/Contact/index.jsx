@@ -25,10 +25,16 @@ const Form = styled.form`
   }
 `;
 
+const Received = styled.div`
+  padding: 20px 0;
+  grid-column-start: 2;
+  grid-column-end: 8;
+`;
+
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xzbypdvr");
   if (state.succeeded) {
-    return <p>:D</p>;
+    return <Received>Got your message!</Received>;
   }
   return (
     <Form onSubmit={handleSubmit}>

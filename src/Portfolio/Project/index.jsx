@@ -35,7 +35,9 @@ const ProjectCopyWrapper = styled.div`
 `;
 
 const ProjectCopyLinks = styled.div`
-  border: ${(p) => (p.reversed ? p.theme.colors.color_1 : "white")} 2px solid;
+  /* border: ${(p) =>
+    p.reversed ? p.theme.colors.color_1 : "white"} 2px solid; */
+  border: white 2px solid;
   border-radius: 3px;
   width: 100%;
   position: relative;

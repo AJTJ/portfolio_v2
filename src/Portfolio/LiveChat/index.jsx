@@ -9,7 +9,7 @@ const ChatWrapper = styled.div`
 `;
 
 const ChatContainer = styled.div`
-  border: black solid 1px;
+  border: white solid 1px;
   grid-column: span 12;
   height: 150px;
   background: white;

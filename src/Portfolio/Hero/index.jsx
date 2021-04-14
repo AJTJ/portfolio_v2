@@ -72,71 +72,59 @@ const Title = styled.div`
 
 const Hero = ({ scrollPosition }) => {
   const canvasRef = useRef();
-  useEffect(() => {
-    const canvasObj = canvasRef.current;
-    const ctx = canvasObj.getContext("2d");
+  // FRACTAL TREE PROJECT
+  // useEffect(() => {
+  //   const canvasObj = canvasRef.current;
+  //   const ctx = canvasObj.getContext("2d");
 
-    const draw = ({ startX, startY, len, angle, branchWidth }) => {
-      // if (start === undefined) {
-      //   start = timestamp;
-      // }
-      // const elapsed = timestamp;
-      // console.log({ elapsed });
+  //   const draw = ({ startX, startY, len, angle, branchWidth }) => {
+  //     ctx.lineWidth = branchWidth;
 
-      ctx.lineWidth = branchWidth;
+  //     ctx.shadowBlur = 15;
+  //     ctx.shadowColor = "rgba(0,0,0,0.8)";
+  //     ctx.strokeStyle = "green";
+  //     ctx.fillStyle = "green";
 
-      ctx.shadowBlur = 15;
-      ctx.shadowColor = "rgba(0,0,0,0.8)";
-      ctx.strokeStyle = "green";
-      ctx.fillStyle = "green";
+  //     ctx.beginPath();
+  //     ctx.save();
 
-      ctx.beginPath();
-      ctx.save();
+  //     ctx.translate(startX, startY);
+  //     ctx.rotate((angle * Math.PI) / 180);
+  //     ctx.moveTo(0, 0);
+  //     ctx.lineTo(0, -len);
+  //     ctx.stroke();
 
-      ctx.translate(startX, startY);
-      ctx.rotate((angle * Math.PI) / 180);
-      ctx.moveTo(0, 0);
-      ctx.lineTo(0, -len);
-      ctx.stroke();
+  //     if (len < 10) {
+  //       ctx.restore();
+  //       return;
+  //     }
 
-      if (len < 10) {
-        ctx.restore();
-        return;
-      }
+  //     draw({
+  //       startX: 0,
+  //       startY: -len,
+  //       len: len * 0.8,
+  //       angle: angle - 15,
+  //       branchWidth: branchWidth * 0.8,
+  //     });
+  //     draw({
+  //       startX: 0,
+  //       startY: -len,
+  //       len: len * 0.8,
+  //       angle: angle + 15,
+  //       branchWidth: branchWidth * 0.8,
+  //     });
 
-      // const timer = setTimeout(() => {
-      draw({
-        startX: 0,
-        startY: -len,
-        len: len * 0.8,
-        angle: angle - 15,
-        branchWidth: branchWidth * 0.8,
-        // timestamp: elapsed,
-      });
-      draw({
-        startX: 0,
-        startY: -len,
-        len: len * 0.8,
-        angle: angle + 15,
-        branchWidth: branchWidth * 0.8,
-        // timestamp: elapsed,
-      });
-      // }, 1000);
+  //     ctx.restore();
+  //   };
 
-      ctx.restore();
-      // return () => clearTimeout(timer);
-    };
-    // window.requestAnimationFrame((timestamp) =>
-    draw({
-      startX: 400,
-      startY: 600,
-      len: 120,
-      angle: 0,
-      branchWidth: 10,
-      // timestamp: timestamp,
-    });
-    // );
-  }, []);
+  //   draw({
+  //     startX: 400,
+  //     startY: 600,
+  //     len: 120,
+  //     angle: 0,
+  //     branchWidth: 10,
+  //   });
+  // }, []);
 
   return (
     <HeroContainer>
@@ -151,9 +139,9 @@ const Hero = ({ scrollPosition }) => {
           Full-Stack Developer, Infrastructure Engineer and Creative Coder.
         </Title>
       </MarginedContainer>
-      <MarginedContainer>
+      {/* <MarginedContainer>
         <canvas ref={canvasRef} width="1000" height="800" />
-      </MarginedContainer>
+      </MarginedContainer> */}
       <CircleContainer>
         <BackgroundCircle
           scrollPosition={scrollPosition > 0 ? scrollPosition : 0}
