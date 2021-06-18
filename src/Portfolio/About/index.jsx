@@ -198,10 +198,10 @@ const About = ({ scrollPosition }) => {
             engineer and creative code enthusiast.
           </Text>
           <Text>
-            I have a passion for architecture and for scalable, concurrent
-            solutions.
+            I have a passion for project architecture and for scalable,
+            concurrent solutions.
           </Text>
-          <Text>These are some tools I enjoy working with.</Text>
+          {/* <Text>These are some tools I enjoy working with.</Text> */}
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
