@@ -75,9 +75,9 @@ const Nav = ({ scrollPosition }) => {
         <First offset={-50} smooth={true} to="about">
           About
         </First>
-        <NavButton offset={-50} smooth={true} to="projects">
+        {/* <NavButton offset={-50} smooth={true} to="projects">
           Projects
-        </NavButton>
+        </NavButton> */}
         <NavButton smooth={true} to="contact">
           Contact
         </NavButton>

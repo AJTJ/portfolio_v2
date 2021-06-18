@@ -41,14 +41,14 @@ const Portfolio = () => {
       <Element name="about">
         <About {...{ scrollPosition }} />
       </Element>
-      <Element name="projects">
+      {/* <Element name="projects">
         <ProjectsTitle />
       </Element>
       <Project liveLink={"www.google.com"} ghLink={"www.google.com"} />
       <Project reversed />
       <Project />
       <Project reversed />
-      <LiveChat />
+      <LiveChat /> */}
       <Element name="contact">
         <Contact />
       </Element>
