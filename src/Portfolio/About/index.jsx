@@ -79,6 +79,9 @@ const InnerDiv = styled.div`
 
 const InnerImg = styled.img`
   height: 70px;
+  /* padding: 10px; */
+  /* background: red; */
+  /* border-radius: 100%; */
 `;
 
 // const YellowCircle = styled.div`

@@ -17,7 +17,7 @@ import {
 const NavWrapper = styled.div`
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 60px;
   z-index: ${zNav};
   transition: all 1s;
   background: ${(p) =>
@@ -29,7 +29,8 @@ const NavWrapper = styled.div`
 `;
 
 const NavContainer = styled(MarginedContainer)`
-  padding: 10px 0;
+  padding: 5px 0;
+  height: 60px;
 `;
 
 const NavButton = styled(Link)`
@@ -51,7 +52,8 @@ const NavButton = styled(Link)`
 `;
 
 const First = styled(NavButton)`
-  grid-column-start: 8;
+  /* grid-column-start: 8; */
+  grid-column-start: 9;
 `;
 
 const LinkImg = styled.img`
@@ -63,15 +65,38 @@ const LinkImgFirst = styled(LinkImg)`
   margin-right: 5px;
 `;
 
-const LinkImgContainer = styled.a`
+const LinkImgWrapper = styled.div`
+  /* height: 55px; */
   grid-column-start: 11;
   display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const LinkImgContainer = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Name = styled.a`
+  font-family: "Sacramento", cursive;
+  font-weight: bolder;
+  max-height: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  cursor: pointer;
 `;
 
 const Nav = ({ scrollPosition }) => {
   return (
     <NavWrapper {...{ scrollPosition }}>
       <NavContainer>
+        <Name onClick={scroll.scrollToTop}>AJ</Name>
         <First offset={-50} smooth={true} to="about">
           About
         </First>
@@ -81,10 +106,22 @@ const Nav = ({ scrollPosition }) => {
         <NavButton smooth={true} to="contact">
           Contact
         </NavButton>
-        <LinkImgContainer href="">
-          <LinkImgFirst src={linked} alt="" />
-          <LinkImg src={github} alt="" />
-        </LinkImgContainer>
+        <LinkImgWrapper>
+          <LinkImgContainer
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/aaron-janke-7827a947/"
+          >
+            <LinkImgFirst src={linked} alt="" />
+          </LinkImgContainer>
+          <LinkImgContainer
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/AJTJ"
+          >
+            <LinkImg src={github} alt="" />
+          </LinkImgContainer>
+        </LinkImgWrapper>
       </NavContainer>
     </NavWrapper>
   );
