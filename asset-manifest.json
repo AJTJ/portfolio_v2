@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.925e07bc.chunk.js",
-    "main.js.map": "/static/js/main.925e07bc.chunk.js.map",
+    "main.js": "/static/js/main.944f0d57.chunk.js",
+    "main.js.map": "/static/js/main.944f0d57.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.38faae8c.js",
     "runtime-main.js.map": "/static/js/runtime-main.38faae8c.js.map",
     "static/js/2.79a23884.chunk.js": "/static/js/2.79a23884.chunk.js",
     "static/js/2.79a23884.chunk.js.map": "/static/js/2.79a23884.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f2470e882e71be46df93053711f609e2.js": "/precache-manifest.f2470e882e71be46df93053711f609e2.js",
+    "precache-manifest.6185eed014db5bd83fee55af23ddf1fd.js": "/precache-manifest.6185eed014db5bd83fee55af23ddf1fd.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.79a23884.chunk.js.LICENSE.txt": "/static/js/2.79a23884.chunk.js.LICENSE.txt",
     "static/media/actix_logo.png": "/static/media/actix_logo.a4ca6efb.png",
@@ -24,6 +24,6 @@
   "entrypoints": [
     "static/js/runtime-main.38faae8c.js",
     "static/js/2.79a23884.chunk.js",
-    "static/js/main.925e07bc.chunk.js"
+    "static/js/main.944f0d57.chunk.js"
   ]
 }
