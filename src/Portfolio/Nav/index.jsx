@@ -36,14 +36,14 @@ const NavContainer = styled(MarginedContainer)`
 const NavButton = styled(Link)`
   height: 30px;
   width: 65px;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 17px;
   border: solid 1px ${(p) => p.theme.colors.color_3};
   transition: all 0.2s;
   cursor: pointer;
   align-self: center;
   &:hover {
-    color: white;
+    color: ${(p) => p.theme.colors.color_1};
     background: ${(p) => p.theme.colors.color_3};
   }
   display: flex;
@@ -87,9 +87,10 @@ const Name = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
   cursor: pointer;
+  /* padding-left: 10px; */
 `;
 
 const Nav = ({ scrollPosition }) => {

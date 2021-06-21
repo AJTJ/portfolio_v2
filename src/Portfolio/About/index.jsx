@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, SectionTitle } from "../layout";
+import { MarginedContainer, SectionTitle, Text } from "../layout";
+import { mq } from "../theme";
 
 //icons
 import rust from "./icons/rust_logo.png";
@@ -22,16 +23,13 @@ const AboutWrapper = styled.div`
   padding: 0 0 30px;
 `;
 
-const Text = styled.div`
-  font-size: 20px;
-  /* grid-column: span 12; */
-  grid-column-start: 2;
-  grid-column-end: 12;
-`;
-
 const IconCircleContainer = styled.div`
+  padding-top: 75px;
   grid-column: span 6;
   position: relative;
+  ${mq[2]} {
+    grid-column: span 1;
+  }
 `;
 
 const IconCircleGuide = styled.div`
@@ -52,6 +50,9 @@ const IconCircleGuide = styled.div`
     border: 2px solid black;
     border-radius: 100%;
   } */
+  ${mq[2]} {
+    left: 350%;
+  }
 `;
 
 const itemRotation = `36deg`;
@@ -140,10 +141,15 @@ const SkillsList = styled.div`
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  ${mq[2]} {
+    grid-column-start: 1;
+    grid-column-end: 10;
+  }
 `;
 
 const SkillGroup = styled.div`
   width: 100%;
+  padding: 10px 0;
   /* color: black; */
 `;
 
@@ -156,20 +162,37 @@ const SkillGroup = styled.div`
 
 const SkillGroupOne = styled(SkillGroup)`
   padding-left: 100px;
+  ${mq[1]} {
+    padding-left: 15px;
+  }
 `;
 
 const SkillGroupTwo = styled(SkillGroup)`
   padding-left: 75px;
-`;
-const SkillGroupThree = styled(SkillGroup)`
-  padding-left: 100px;
+  ${mq[1]} {
+    padding-left: 15px;
+  }
 `;
 
-const TwoSkillGroups = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+const SkillGroupThree = styled(SkillGroup)`
+  padding-left: 100px;
+  ${mq[1]} {
+    padding-left: 15px;
+  }
 `;
+
+const SkillGroupFour = styled(SkillGroup)`
+  padding-left: 125px;
+  ${mq[1]} {
+    padding-left: 15px;
+  }
+`;
+
+// const TwoSkillGroups = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+// `;
 
 const Skill = styled.div`
   font-size: 20px;
@@ -197,12 +220,13 @@ const About = ({ scrollPosition }) => {
         <MarginedContainer>
           <SectionTitle>About Me</SectionTitle>
           <Text>
-            Hi, I'm Aaron. I'm a passionate full-stack developer, infrastructure
+            Hi, I'm Aaron, I'm a passionate full-stack developer, infrastructure
             engineer and creative code enthusiast.
           </Text>
           <Text>
             I have a passion for project architecture and for scalable,
-            concurrent solutions.
+            performant solutions in concurrent environments which leads me to
+            dig into all sorts of languages and tools.
           </Text>
           {/* <Text>These are some tools I enjoy working with.</Text> */}
         </MarginedContainer>
@@ -216,21 +240,33 @@ const About = ({ scrollPosition }) => {
             {/* <SkillGroupOneWrapper> */}
             <SkillGroupOne>
               <SkillSection>Javascript</SkillSection>
-              <Skill>React</Skill>
               <Skill>Node</Skill>
+              <Skill>Express</Skill>
+              <Skill>React</Skill>
+              <Skill>CSS-in-JS</Skill>
             </SkillGroupOne>
             {/* </SkillGroupOneWrapper> */}
             {/* <TwoSkillGroups> */}
             <SkillGroupTwo>
               <SkillSection>Rust</SkillSection>
               <Skill>Actix-Web</Skill>
+              <Skill>Tokio</Skill>
               <Skill>WASM</Skill>
             </SkillGroupTwo>
             <SkillGroupThree>
-              <SkillSection>Infrastructure</SkillSection>
+              <SkillSection>Infrastructure/DB</SkillSection>
               <Skill>Kubernetes</Skill>
               <Skill>Docker</Skill>
+              <Skill>SQLite</Skill>
+              <Skill>MySQL</Skill>
+              <Skill>MongoDB</Skill>
             </SkillGroupThree>
+            {/* <SkillGroupFour>
+              <SkillSection>More!</SkillSection>
+              <Skill>CSS</Skill>
+              <Skill>Docker</Skill>
+              <Skill>SQLite</Skill>
+            </SkillGroupFour> */}
             {/* </TwoSkillGroups> */}
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />

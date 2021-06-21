@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, SectionTitle } from "../layout";
+import { MarginedContainer, SectionTitle, Text } from "../layout";
 import linkedImg from "../assets/linked_img.jpeg";
 import github from "../assets/github.png";
 import globe from "../assets/globe.png";
@@ -37,7 +37,7 @@ const ProjectCopyWrapper = styled.div`
 const ProjectCopyLinks = styled.div`
   /* border: ${(p) =>
     p.reversed ? p.theme.colors.color_1 : "white"} 2px solid; */
-  border: white 2px solid;
+  border: white 10px solid;
   border-radius: 3px;
   width: 100%;
   position: relative;
@@ -109,6 +109,7 @@ const Project = ({
 
 const ProjectsTitleWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_1};
+  padding-bottom: 30px;
 `;
 
 const ProjectsTitleStyled = styled(SectionTitle)`
@@ -121,6 +122,7 @@ export const ProjectsTitle = () => {
     <ProjectsTitleWrapper>
       <MarginedContainer>
         <ProjectsTitleStyled>Projects</ProjectsTitleStyled>
+        {/* <Text>Projects coming soon.</Text> */}
       </MarginedContainer>
     </ProjectsTitleWrapper>
   );

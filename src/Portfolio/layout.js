@@ -2,6 +2,13 @@
 import styled from "@emotion/styled";
 import { mq } from "./theme";
 
+export const Text = styled.div`
+  font-size: 20px;
+  /* grid-column: span 12; */
+  grid-column-start: 2;
+  grid-column-end: 12;
+`;
+
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);

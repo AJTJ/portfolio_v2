@@ -43,8 +43,8 @@ const Portfolio = () => {
       </Element>
       {/* <Element name="projects">
         <ProjectsTitle />
-      </Element>
-      <Project liveLink={"www.google.com"} ghLink={"www.google.com"} />
+      </Element> */}
+      {/* <Project liveLink={"www.google.com"} ghLink={"www.google.com"} />
       <Project reversed />
       <Project />
       <Project reversed />
