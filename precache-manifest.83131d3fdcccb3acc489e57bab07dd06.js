@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "401f4ac50a49c6b9584678d26b8e5ca5",
+    "revision": "e4c889ef805c44641f13ed27b612024e",
     "url": "/index.html"
   },
   {
-    "revision": "f3e684fea7c4a9ce5014",
-    "url": "/static/js/2.79a23884.chunk.js"
+    "revision": "e37db6b3eabfeb6c46f7",
+    "url": "/static/js/2.23d3c6ad.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.79a23884.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.23d3c6ad.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d7ce1e7528c1d91a5a01",
-    "url": "/static/js/main.944f0d57.chunk.js"
+    "revision": "a465c80b5942da080e73",
+    "url": "/static/js/main.e0b652b5.chunk.js"
   },
   {
     "revision": "1060075588c1c0a4b0cb",
@@ -54,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7bb33c1694186552ec0464e23fc09bbe",
     "url": "/static/media/rust_logo.7bb33c16.png"
+  },
+  {
+    "revision": "2e9b18e38873eacff5189bb358f7aef8",
+    "url": "/static/media/sql-server.2e9b18e3.png"
   },
   {
     "revision": "ce4d1ff0fff530080df35c6c8c8c3605",
