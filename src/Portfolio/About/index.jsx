@@ -14,6 +14,7 @@ import docker from "./icons/docker.png";
 import js from "./icons/js.png";
 import ellipsis from "./icons/ellipsis.png";
 import three from "./icons/three.png";
+import sql from "./icons/sql-server.png";
 
 // import { Fade } from "react-awesome-reveal";
 
@@ -55,7 +56,7 @@ const IconCircleGuide = styled.div`
   }
 `;
 
-const itemRotation = `36deg`;
+const itemRotation = 360 / 11 + "deg";
 //
 const InnerDiv = styled.div`
   width: 24px;
@@ -79,7 +80,8 @@ const InnerDiv = styled.div`
 `;
 
 const InnerImg = styled.img`
-  height: 70px;
+  height: 65px;
+
   /* padding: 10px; */
   /* background: red; */
   /* border-radius: 100%; */
@@ -119,6 +121,9 @@ const IconCircle = ({ scrollPosition }) => {
                           <InnerImg src={js} alt="" />
                           <InnerDiv>
                             <InnerImg src={ellipsis} alt="" />
+                            <InnerDiv>
+                              <InnerImg src={sql} alt="" />
+                            </InnerDiv>
                           </InnerDiv>
                         </InnerDiv>
                       </InnerDiv>
@@ -210,7 +215,7 @@ const SkillsWrapper = styled.div`
 `;
 
 const SkillCircleContainer = styled(MarginedContainer)`
-  padding: 50px 0 200px;
+  padding: 0px 0 100px;
 `;
 
 const About = ({ scrollPosition }) => {
@@ -228,7 +233,7 @@ const About = ({ scrollPosition }) => {
             performant solutions in concurrent environments which leads me to
             dig into all sorts of languages and tools.
           </Text>
-          {/* <Text>These are some tools I enjoy working with.</Text> */}
+          <Text>Here are some tools I have enjoyed working with.</Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
@@ -243,6 +248,7 @@ const About = ({ scrollPosition }) => {
               <Skill>Node</Skill>
               <Skill>Express</Skill>
               <Skill>React</Skill>
+              <Skill>Redux</Skill>
               <Skill>CSS-in-JS</Skill>
             </SkillGroupOne>
             {/* </SkillGroupOneWrapper> */}

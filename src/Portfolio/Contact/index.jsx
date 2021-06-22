@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useForm, ValidationError } from "@formspree/react";
 
-import { MarginedContainer, SectionTitle } from "../layout";
+import { MarginedContainer, SectionTitle, Button } from "../layout";
 
 const ContactWrapper = styled.div`
   padding: 75px 0 150px;
@@ -14,21 +14,22 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column-end: 10;
   input,
   textarea {
     margin: 10px 0;
     padding: 5px;
   }
   button {
-    width: 75px;
+    align-self: flex-start;
+    margin-top: 20px;
   }
 `;
 
 const Received = styled.div`
   padding: 20px 0;
   grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column-end: 10;
 `;
 
 const ContactForm = () => {
@@ -44,9 +45,9 @@ const ContactForm = () => {
       <label htmlFor="message">Message</label>
       <textarea id="message" name="message" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <button type="submit" disabled={state.submitting}>
+      <Button type="submit" disabled={state.submitting}>
         Submit
-      </button>
+      </Button>
     </Form>
   );
 };

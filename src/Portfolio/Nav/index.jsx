@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, zNav } from "../layout";
+import { MarginedContainer, zNav, Button as NavButton } from "../layout";
 import linked from "../assets/linked.png";
 import github from "../assets/github.png";
 import {
@@ -31,24 +31,6 @@ const NavWrapper = styled.div`
 const NavContainer = styled(MarginedContainer)`
   padding: 5px 0;
   height: 60px;
-`;
-
-const NavButton = styled(Link)`
-  height: 30px;
-  width: 65px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 17px;
-  border: solid 1px ${(p) => p.theme.colors.color_3};
-  transition: all 0.2s;
-  cursor: pointer;
-  align-self: center;
-  &:hover {
-    color: ${(p) => p.theme.colors.color_1};
-    background: ${(p) => p.theme.colors.color_3};
-  }
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const First = styled(NavButton)`
@@ -98,13 +80,13 @@ const Nav = ({ scrollPosition }) => {
     <NavWrapper {...{ scrollPosition }}>
       <NavContainer>
         <Name onClick={scroll.scrollToTop}>AJ</Name>
-        <First offset={-50} smooth={true} to="about">
+        <First as={Link} offset={-50} smooth={true} to="about">
           About
         </First>
-        {/* <NavButton offset={-50} smooth={true} to="projects">
+        {/* <NavButton as={Link} offset={-50} smooth={true} to="projects">
           Projects
         </NavButton> */}
-        <NavButton smooth={true} to="contact">
+        <NavButton as={Link} smooth={true} to="contact">
           Contact
         </NavButton>
         <LinkImgWrapper>

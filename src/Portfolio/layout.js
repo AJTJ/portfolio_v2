@@ -34,3 +34,21 @@ export const SectionTitle = styled.div`
 `;
 
 export const zNav = 50;
+
+export const Button = styled.button`
+  height: 30px;
+  width: 65px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 17px;
+  border: solid 1px ${(p) => p.theme.colors.color_3};
+  transition: all 0.2s;
+  cursor: pointer;
+  align-self: center;
+  &:hover {
+    color: ${(p) => p.theme.colors.color_1};
+    background: ${(p) => p.theme.colors.color_3};
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
