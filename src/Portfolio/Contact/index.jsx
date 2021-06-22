@@ -19,6 +19,9 @@ const Form = styled.form`
   textarea {
     margin: 10px 0;
     padding: 5px;
+    background: ${(p) => p.theme.colors.color_1};
+    border-width: 1px;
+    border-radius: 5px;
   }
   button {
     align-self: flex-start;

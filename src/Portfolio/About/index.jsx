@@ -21,7 +21,7 @@ import sql from "./icons/sql-server.png";
 const AboutWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_2};
   /* background: color_1; */
-  padding: 0 0 30px;
+  padding: 50px 0 30px;
 `;
 
 const IconCircleContainer = styled.div`
@@ -218,6 +218,10 @@ const SkillCircleContainer = styled(MarginedContainer)`
   padding: 0px 0 100px;
 `;
 
+const GitLink = styled.a`
+  color: ${(p) => p.theme.colors.orange};
+`;
+
 const About = ({ scrollPosition }) => {
   return (
     <>
@@ -233,7 +237,17 @@ const About = ({ scrollPosition }) => {
             performant solutions in concurrent environments which leads me to
             dig into all sorts of languages and tools.
           </Text>
-          <Text>Here are some tools I have enjoyed working with.</Text>
+          <Text>
+            Here are some tools I have enjoyed working with. Check out my{" "}
+            <GitLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/AJTJ"
+            >
+              github
+            </GitLink>
+            .
+          </Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>

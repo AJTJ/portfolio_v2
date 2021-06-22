@@ -63,7 +63,7 @@ export const Global = () => (
         color: #514d4f;
         a {
           text-decoration: none;
-          color: inherit;
+          color: ${(p) => p.theme.colors.color_1};
         }
       }
     `}
