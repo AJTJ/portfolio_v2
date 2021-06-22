@@ -93,7 +93,7 @@ const Nav = ({ scrollPosition }) => {
           <LinkImgContainer
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/aaron-janke-7827a947/"
+            href="www.linkedin.com/in/aaron-janke"
           >
             <LinkImgFirst src={linked} alt="" />
           </LinkImgContainer>
