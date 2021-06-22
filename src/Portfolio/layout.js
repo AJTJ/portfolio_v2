@@ -51,4 +51,9 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mq[1]} {
+    width: 53px;
+    height: 24px;
+    font-size: 12px;
+  }
 `;

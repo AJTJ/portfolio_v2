@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { MarginedContainer, zNav, Button as NavButton } from "../layout";
+import { mq } from "../theme";
 import linked from "../assets/linked.png";
 import github from "../assets/github.png";
 import {
@@ -41,6 +42,10 @@ const First = styled(NavButton)`
 const LinkImg = styled.img`
   width: 32px;
   height: 32px;
+  ${mq[2]} {
+    height: 24px;
+    width: 24px;
+  }
 `;
 
 const LinkImgFirst = styled(LinkImg)`

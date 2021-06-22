@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 
 import styled from "@emotion/styled";
 import { MarginedContainer } from "../layout";
+import { mq } from "../theme";
 import headshot from "../assets/linked_img.jpeg";
 // import { isCompositeComponentWithType } from "react-dom/test-utils";
 
@@ -51,10 +52,22 @@ const Name = styled.div`
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   color: ${(p) => p.theme.colors.color_3};
+  ${mq[1]} {
+    grid-column: span 12;
+    font-size: 80px;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+  }
 `;
 
 const ImgContainer = styled.div`
   grid-column: span 3;
+  ${mq[1]} {
+    grid-column: span 12;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const FaceImg = styled.img`
@@ -68,6 +81,7 @@ const Title = styled.div`
   grid-column-start: 2;
   grid-column-end: 11;
   font-size: 25px;
+  padding-top: 20px;
 `;
 
 const Hero = ({ scrollPosition }) => {
