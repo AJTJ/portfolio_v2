@@ -258,11 +258,12 @@ const About = ({ scrollPosition }) => {
           <SkillsList>
             {/* <SkillGroupOneWrapper> */}
             <SkillGroupOne>
-              <SkillSection>Javascript</SkillSection>
+              <SkillSection>Javascript/TypeScript</SkillSection>
               <Skill>Node</Skill>
               <Skill>Express</Skill>
+              <Skill>NestJS</Skill>
               <Skill>React</Skill>
-              <Skill>Redux</Skill>
+              <Skill>ThreeJS</Skill>
               <Skill>CSS-in-JS</Skill>
             </SkillGroupOne>
             {/* </SkillGroupOneWrapper> */}
@@ -272,11 +273,12 @@ const About = ({ scrollPosition }) => {
               <Skill>Actix-Web</Skill>
               <Skill>Tokio</Skill>
               <Skill>WASM</Skill>
+              <Skill>Nannou</Skill>
             </SkillGroupTwo>
             <SkillGroupThree>
               <SkillSection>Infrastructure/DB</SkillSection>
-              <Skill>Kubernetes</Skill>
               <Skill>Docker</Skill>
+              <Skill>Kubernetes</Skill>
               <Skill>SQLite</Skill>
               <Skill>MySQL</Skill>
               <Skill>MongoDB</Skill>

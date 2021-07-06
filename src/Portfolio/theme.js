@@ -57,6 +57,9 @@ export const Global = () => (
       * {
         box-sizing: border-box;
       }
+      p {
+        margin: 0;
+      }
       body {
         margin: 0;
         // default text color

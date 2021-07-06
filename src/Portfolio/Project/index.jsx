@@ -1,21 +1,31 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { MarginedContainer, SectionTitle, Text } from "../layout";
-import linkedImg from "../assets/linked_img.jpeg";
 import github from "../assets/github.png";
 import globe from "../assets/globe.png";
 
 const ProjectWrapper = styled.div`
-  background: ${(p) =>
-    p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
+  background: linear-gradient(
+      rgba(255, 233, 141, 0.3),
+      rgba(255, 233, 141, 0.3)
+    ),
+    ${(p) =>
+      p.image
+        ? `url(${p.image})`
+        : p.reversed
+        ? p.theme.colors.color_4
+        : p.theme.colors.color_1};
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 20px 0;
+  color: black;
 `;
 
 const ProjectContainer = styled(MarginedContainer)`
   /* height: 800px; */
   /* display: flex; */
   /* align-items: center; */
-  padding: 30px 0;
+  padding: 30px 10px;
 `;
 
 const ProjectImgContainer = styled.div`
@@ -28,29 +38,32 @@ const ProjectImgContainer = styled.div`
 `;
 
 const ProjectCopyWrapper = styled.div`
-  grid-column: span 8;
+  grid-column-start: 4;
+  grid-column-end: 12;
   order: ${(p) => (p.reversed ? -1 : 2)};
   display: flex;
   align-items: center;
+
+  border-radius: 5px;
 `;
 
 const ProjectCopyLinks = styled.div`
-  /* border: ${(p) =>
-    p.reversed ? p.theme.colors.color_1 : "white"} 2px solid; */
-  border: white 10px solid;
-  border-radius: 3px;
+  border: 1px solid ${(p) => p.theme.colors.color_3};
+  border-radius: 10px;
   width: 100%;
-  position: relative;
-  top: 20px;
+  /* position: relative; */
+  /* top: 20px; */
   right: ${(p) => (p.reversed ? "-100px" : "100px")};
   background: ${(p) =>
     p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
-  padding: 50px;
+
+  padding: 15px;
 `;
 
 const ProjectLinks = styled.div`
   display: flex;
   justify-content: flex-end;
+  padding-top: 15px;
 `;
 
 const Link = styled.a`
@@ -66,22 +79,27 @@ const Link = styled.a`
 
 const ProjTitleContainer = styled.p`
   font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 20px;
 `;
 
 const Project = ({
-  reversed,
   ghLink,
   liveLink,
   projImg,
   projCopy,
   projTitle,
+  reversed,
+  imgCircle,
 }) => {
   return (
-    <ProjectWrapper {...{ reversed }}>
+    <ProjectWrapper image={!imgCircle && projImg} {...{ reversed }}>
       <ProjectContainer>
-        <ProjectImgContainer>
-          <img src={projImg || linkedImg} alt="" />
-        </ProjectImgContainer>
+        {imgCircle && projImg && (
+          <ProjectImgContainer>
+            <img src={projImg} alt="" />
+          </ProjectImgContainer>
+        )}
         <ProjectCopyWrapper {...{ reversed }}>
           <ProjectCopyLinks {...{ reversed }}>
             <ProjTitleContainer>
@@ -115,6 +133,7 @@ const ProjectsTitleWrapper = styled.div`
 const ProjectsTitleStyled = styled(SectionTitle)`
   grid-column-start: 6;
   grid-column-end: 12;
+  color: ${(p) => p.theme.colors.color_3};
 `;
 
 export const ProjectsTitle = () => {
@@ -122,7 +141,6 @@ export const ProjectsTitle = () => {
     <ProjectsTitleWrapper>
       <MarginedContainer>
         <ProjectsTitleStyled>Projects</ProjectsTitleStyled>
-        {/* <Text>Projects coming soon.</Text> */}
       </MarginedContainer>
     </ProjectsTitleWrapper>
   );

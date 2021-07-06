@@ -35,8 +35,8 @@ const NavContainer = styled(MarginedContainer)`
 `;
 
 const First = styled(NavButton)`
-  /* grid-column-start: 8; */
-  grid-column-start: 9;
+  grid-column-start: 8;
+  /* grid-column-start: 9; */
 `;
 
 const LinkImg = styled.img`
@@ -88,9 +88,9 @@ const Nav = ({ scrollPosition }) => {
         <First as={Link} offset={-50} smooth={true} to="about">
           About
         </First>
-        {/* <NavButton as={Link} offset={-50} smooth={true} to="projects">
+        <NavButton as={Link} offset={-50} smooth={true} to="projects">
           Projects
-        </NavButton> */}
+        </NavButton>
         <NavButton as={Link} smooth={true} to="contact">
           Contact
         </NavButton>
