@@ -38,7 +38,7 @@ const ProjectImgContainer = styled.div`
 `;
 
 const ProjectCopyWrapper = styled.div`
-  grid-column-start: 4;
+  grid-column-start: 2;
   grid-column-end: 12;
   order: ${(p) => (p.reversed ? -1 : 2)};
   display: flex;
@@ -56,7 +56,6 @@ const ProjectCopyLinks = styled.div`
   right: ${(p) => (p.reversed ? "-100px" : "100px")};
   background: ${(p) =>
     p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
-
   padding: 15px;
 `;
 
