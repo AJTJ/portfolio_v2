@@ -6,7 +6,7 @@ import { mq } from "../theme";
 import headshot from "../assets/linked_img.jpeg";
 // import { isCompositeComponentWithType } from "react-dom/test-utils";
 
-const circleSize = "850";
+const circleSize = "300";
 
 const BackgroundCircle = styled.div`
   position: absolute;

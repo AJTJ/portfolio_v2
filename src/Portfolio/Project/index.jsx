@@ -107,12 +107,12 @@ const Project = ({
             <p>{projCopy || "A bunch of copy about the project"}</p>
             <ProjectLinks>
               {ghLink && (
-                <Link href={ghLink}>
+                <Link href={ghLink} target="_blank" rel="noopener noreferrer">
                   <img src={github} alt="" />
                 </Link>
               )}
               {liveLink && (
-                <Link href={liveLink}>
+                <Link href={liveLink} target="_blank" rel="noopener noreferrer">
                   <img src={globe} alt="" />
                 </Link>
               )}
