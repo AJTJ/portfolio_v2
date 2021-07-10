@@ -22,9 +22,6 @@ const ProjectWrapper = styled.div`
 `;
 
 const ProjectContainer = styled(MarginedContainer)`
-  /* height: 800px; */
-  /* display: flex; */
-  /* align-items: center; */
   padding: 30px 10px;
 `;
 
@@ -130,16 +127,38 @@ const ProjectsTitleWrapper = styled.div`
 `;
 
 const ProjectsTitleStyled = styled(SectionTitle)`
-  grid-column-start: 6;
-  grid-column-end: 12;
+  /* grid-column-start: 6;
+  grid-column-end: 12; */
   color: ${(p) => p.theme.colors.color_3};
+  text-align: center;
+  grid-column: span 12;
+`;
+
+const Caution = styled.div`
+  text-align: center;
+  grid-column: span 12;
+`;
+
+const CautionSpan = styled.span`
+  padding: 0 5px;
 `;
 
 export const ProjectsTitle = () => {
   return (
     <ProjectsTitleWrapper>
       <MarginedContainer>
-        <ProjectsTitleStyled>Projects</ProjectsTitleStyled>
+        <ProjectsTitleStyled>Some Projects</ProjectsTitleStyled>
+        <Caution>
+          <CautionSpan role="img" aria-label="construction emoji">
+            🚧
+          </CautionSpan>
+          <CautionSpan>
+            <strong>Possibly Experimental</strong>
+          </CautionSpan>
+          <CautionSpan role="img" aria-label="construction emoji">
+            🚧
+          </CautionSpan>
+        </Caution>
       </MarginedContainer>
     </ProjectsTitleWrapper>
   );

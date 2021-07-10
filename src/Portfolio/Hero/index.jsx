@@ -71,7 +71,7 @@ const ImgContainer = styled.div`
 `;
 
 const FaceImg = styled.img`
-  /* height: 100%; */
+  height: 100%;
   width: 100%;
   border-radius: 50%;
   max-width: 250px;
@@ -86,59 +86,6 @@ const Title = styled.div`
 
 const Hero = ({ scrollPosition }) => {
   const canvasRef = useRef();
-  // FRACTAL TREE PROJECT
-  // useEffect(() => {
-  //   const canvasObj = canvasRef.current;
-  //   const ctx = canvasObj.getContext("2d");
-
-  //   const draw = ({ startX, startY, len, angle, branchWidth }) => {
-  //     ctx.lineWidth = branchWidth;
-
-  //     ctx.shadowBlur = 15;
-  //     ctx.shadowColor = "rgba(0,0,0,0.8)";
-  //     ctx.strokeStyle = "green";
-  //     ctx.fillStyle = "green";
-
-  //     ctx.beginPath();
-  //     ctx.save();
-
-  //     ctx.translate(startX, startY);
-  //     ctx.rotate((angle * Math.PI) / 180);
-  //     ctx.moveTo(0, 0);
-  //     ctx.lineTo(0, -len);
-  //     ctx.stroke();
-
-  //     if (len < 10) {
-  //       ctx.restore();
-  //       return;
-  //     }
-
-  //     draw({
-  //       startX: 0,
-  //       startY: -len,
-  //       len: len * 0.8,
-  //       angle: angle - 15,
-  //       branchWidth: branchWidth * 0.8,
-  //     });
-  //     draw({
-  //       startX: 0,
-  //       startY: -len,
-  //       len: len * 0.8,
-  //       angle: angle + 15,
-  //       branchWidth: branchWidth * 0.8,
-  //     });
-
-  //     ctx.restore();
-  //   };
-
-  //   draw({
-  //     startX: 400,
-  //     startY: 600,
-  //     len: 120,
-  //     angle: 0,
-  //     branchWidth: 10,
-  //   });
-  // }, []);
 
   return (
     <HeroContainer>
@@ -149,9 +96,7 @@ const Hero = ({ scrollPosition }) => {
         </ImgContainer>
       </NameContainer>
       <MarginedContainer>
-        <Title>
-          Full-Stack Developer, Infrastructure Engineer and Creative Coder.
-        </Title>
+        <Title>Full-Stack Engineer and Creative Coder.</Title>
       </MarginedContainer>
       {/* <MarginedContainer>
         <canvas ref={canvasRef} width="1000" height="800" />
@@ -180,3 +125,56 @@ export default Hero;
 //     ? { x: window.scrollX, y: window.scrollY }
 //     : { x: position.left, y: position.top };
 // };
+// FRACTAL TREE PROJECT
+// useEffect(() => {
+//   const canvasObj = canvasRef.current;
+//   const ctx = canvasObj.getContext("2d");
+
+//   const draw = ({ startX, startY, len, angle, branchWidth }) => {
+//     ctx.lineWidth = branchWidth;
+
+//     ctx.shadowBlur = 15;
+//     ctx.shadowColor = "rgba(0,0,0,0.8)";
+//     ctx.strokeStyle = "green";
+//     ctx.fillStyle = "green";
+
+//     ctx.beginPath();
+//     ctx.save();
+
+//     ctx.translate(startX, startY);
+//     ctx.rotate((angle * Math.PI) / 180);
+//     ctx.moveTo(0, 0);
+//     ctx.lineTo(0, -len);
+//     ctx.stroke();
+
+//     if (len < 10) {
+//       ctx.restore();
+//       return;
+//     }
+
+//     draw({
+//       startX: 0,
+//       startY: -len,
+//       len: len * 0.8,
+//       angle: angle - 15,
+//       branchWidth: branchWidth * 0.8,
+//     });
+//     draw({
+//       startX: 0,
+//       startY: -len,
+//       len: len * 0.8,
+//       angle: angle + 15,
+//       branchWidth: branchWidth * 0.8,
+//     });
+
+//     ctx.restore();
+//   };
+
+//   draw({
+//     startX: 400,
+//     startY: 600,
+//     len: 120,
+//     angle: 0,
+//     branchWidth: 10,
+//   });
+// }, []);

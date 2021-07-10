@@ -16,7 +16,19 @@ import ellipsis from "./icons/ellipsis.png";
 import three from "./icons/three.png";
 import sql from "./icons/sql-server.png";
 
-// import { Fade } from "react-awesome-reveal";
+const toolArray = [
+  rust,
+  actix,
+  wasm,
+  react,
+  node,
+  kube,
+  docker,
+  three,
+  js,
+  ellipsis,
+  sql,
+];
 
 const AboutWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_2};
@@ -36,28 +48,18 @@ const IconCircleContainer = styled.div`
 const IconCircleGuide = styled.div`
   width: 24px;
   height: 300px;
-  /* margin-left: 200px; */
   position: relative;
   left: 50%;
-  /* top: 50px; */
   -webkit-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   -ms-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   transform: rotate(${(p) => p.scrollPosition / 10}deg);
-  /* &:before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
-    border-radius: 100%;
-  } */
   ${mq[2]} {
     left: 350%;
   }
 `;
 
-const itemRotation = 360 / 11 + "deg";
-//
+const itemRotation = 360 / toolArray.length + "deg";
+
 const InnerDiv = styled.div`
   width: 24px;
   height: 390px;
@@ -80,60 +82,32 @@ const InnerDiv = styled.div`
 `;
 
 const InnerImg = styled.img`
-  height: 65px;
-
-  /* padding: 10px; */
-  /* background: red; */
-  /* border-radius: 100%; */
+  height: ${660 / toolArray.length + "px"};
 `;
 
-// const YellowCircle = styled.div`
-//   width: 100px;
-//   height: 100px;
-//   position: absolute;
-//   left: 35%;
-//   background: yellow;
-//   border-radius: 100%;
-// `;
+const circleComponent = (givenArray) => {
+  const newArray = [...givenArray];
+  const CreateInnerDivs = ({ myArray }) => {
+    console.log(myArray);
+    let currentImg = myArray[0];
+    myArray.splice(0, 1);
+    console.log(currentImg);
+    return (
+      <InnerDiv>
+        <InnerImg src={currentImg} alt="" />
+        {!!myArray.length && CreateInnerDivs({ myArray })}
+      </InnerDiv>
+    );
+  };
+
+  return CreateInnerDivs({ myArray: newArray });
+};
 
 const IconCircle = ({ scrollPosition }) => {
   return (
     <IconCircleContainer>
-      {/* <YellowCircle /> */}
       <IconCircleGuide scrollPosition={scrollPosition}>
-        <InnerDiv>
-          <InnerImg src={rust} alt="" />
-          <InnerDiv>
-            <InnerImg src={actix} alt="" />
-            <InnerDiv>
-              <InnerImg src={wasm} alt="" />
-              <InnerDiv>
-                <InnerImg src={react} alt="" />
-                <InnerDiv>
-                  <InnerImg src={node} alt="" />
-                  <InnerDiv>
-                    <InnerImg src={kube} alt="" />
-                    <InnerDiv>
-                      <InnerImg src={docker} alt="" />
-                      <InnerDiv>
-                        <InnerImg src={three} alt="" />
-                        <InnerDiv>
-                          <InnerImg src={js} alt="" />
-                          <InnerDiv>
-                            <InnerImg src={ellipsis} alt="" />
-                            <InnerDiv>
-                              <InnerImg src={sql} alt="" />
-                            </InnerDiv>
-                          </InnerDiv>
-                        </InnerDiv>
-                      </InnerDiv>
-                    </InnerDiv>
-                  </InnerDiv>
-                </InnerDiv>
-              </InnerDiv>
-            </InnerDiv>
-          </InnerDiv>
-        </InnerDiv>
+        {circleComponent(toolArray)}
       </IconCircleGuide>
     </IconCircleContainer>
   );
@@ -155,15 +129,7 @@ const SkillsList = styled.div`
 const SkillGroup = styled.div`
   width: 100%;
   padding: 10px 0;
-  /* color: black; */
 `;
-
-// const SkillGroupOneWrapper = styled.div`
-//   display: flex;
-//   justify-content: space-around;
-//   width: 100%;
-//   padding-bottom: 40px;
-// `;
 
 const SkillGroupOne = styled(SkillGroup)`
   padding-left: 100px;
@@ -238,16 +204,25 @@ const About = ({ scrollPosition }) => {
             dig into all sorts of languages and tools.
           </Text>
           <Text>
-            Here are some tools I have enjoyed working with. Check out my{" "}
+            Check out my{" "}
             <GitLink
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/AJTJ"
             >
               github
+            </GitLink>{" "}
+            or my{" "}
+            <GitLink
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/aaron-janke/"
+            >
+              linkedin
             </GitLink>
             .
           </Text>
+          <Text>Here are some tools I've worked with.</Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
