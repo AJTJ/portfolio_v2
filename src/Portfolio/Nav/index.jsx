@@ -37,6 +37,9 @@ const NavContainer = styled(MarginedContainer)`
 const First = styled(NavButton)`
   grid-column-start: 8;
   /* grid-column-start: 9; */
+  ${mq[1]} {
+    grid-column-start: 5;
+  }
 `;
 
 const LinkImg = styled.img`
@@ -58,6 +61,9 @@ const LinkImgWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${mq[1]} {
+    grid-column-start: 8;
+  }
 `;
 
 const LinkImgContainer = styled.a`

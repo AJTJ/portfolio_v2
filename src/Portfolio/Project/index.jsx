@@ -153,7 +153,7 @@ export const ProjectsTitle = () => {
             🚧
           </CautionSpan>
           <CautionSpan>
-            <strong>Possibly Experimental</strong>
+            <strong>Caution! || Potentially Experimental</strong>
           </CautionSpan>
           <CautionSpan role="img" aria-label="construction emoji">
             🚧

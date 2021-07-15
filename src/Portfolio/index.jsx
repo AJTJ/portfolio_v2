@@ -54,7 +54,7 @@ const Portfolio = () => {
         ghLink={"https://github.com/AJTJ/rusty_chat"}
         projImg={rusty_chat_img}
         projCopy={
-          "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database. Digging deeper into the actor framework."
+          "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor framework."
         }
       />
       <Project
@@ -63,7 +63,7 @@ const Portfolio = () => {
         liveLink={"http://yukonliteracy.com/"}
         projImg={cms_background}
         projCopy={
-          "A custom CMS built using react-static, NetlifyCMS and distributed over Netlify."
+          "A custom CMS built using react-static, NetlifyCMS and distributed over Netlify for a neat, git-based system."
         }
         // reversed={true}
       />

@@ -195,13 +195,13 @@ const About = ({ scrollPosition }) => {
         <MarginedContainer>
           <SectionTitle>About Me</SectionTitle>
           <Text>
-            Hi, I'm Aaron, I'm a passionate full-stack developer, infrastructure
-            engineer and creative code enthusiast.
+            Hi, I'm Aaron. I'm a full-stack engineer and creative code
+            enthusiast.
           </Text>
           <Text>
             I have a passion for project architecture and for scalable,
-            performant solutions in concurrent environments which leads me to
-            dig into all sorts of languages and tools.
+            performant solutions. This has led me to dig into all sorts of
+            languages and tools.
           </Text>
           <Text>
             Check out my{" "}
@@ -222,7 +222,7 @@ const About = ({ scrollPosition }) => {
             </GitLink>
             .
           </Text>
-          <Text>Here are some tools I've worked with.</Text>
+          <Text>Here's some tools I've worked with:</Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
