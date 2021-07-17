@@ -255,7 +255,7 @@ const About = ({ scrollPosition }) => {
               <Skill>Docker</Skill>
               <Skill>Kubernetes</Skill>
               <Skill>SQLite</Skill>
-              <Skill>MySQL</Skill>
+              <Skill>PostgreSQL</Skill>
               <Skill>MongoDB</Skill>
             </SkillGroupThree>
             {/* <SkillGroupFour>
