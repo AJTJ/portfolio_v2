@@ -253,10 +253,10 @@ const About = ({ scrollPosition }) => {
             <SkillGroupThree>
               <SkillSection>Infrastructure/DB</SkillSection>
               <Skill>Docker</Skill>
-              <Skill>Kubernetes</Skill>
               <Skill>SQLite</Skill>
               <Skill>PostgreSQL</Skill>
               <Skill>MongoDB</Skill>
+              <Skill>Kubernetes</Skill>
             </SkillGroupThree>
             {/* <SkillGroupFour>
               <SkillSection>More!</SkillSection>
