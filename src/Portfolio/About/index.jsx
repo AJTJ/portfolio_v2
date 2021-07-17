@@ -195,7 +195,7 @@ const About = ({ scrollPosition }) => {
         <MarginedContainer>
           <SectionTitle>About Me</SectionTitle>
           <Text>
-            Hi, I'm Aaron. I'm a full-stack engineer and creative code
+            Hi, I'm Aaron. I'm a full stack engineer and creative code
             enthusiast.
           </Text>
           <Text>
