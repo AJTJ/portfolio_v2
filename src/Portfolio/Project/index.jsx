@@ -1,9 +1,17 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, SectionTitle, Text } from "../layout";
+import { MarginedContainer, SectionTitle } from "../layout";
 import github from "../assets/github.png";
 import globe from "../assets/globe.png";
 
+// interface ReversedProps {
+//   reversed: boolean;
+// }
+// interface ProjectStyledProps extends ReversedProps {
+//   image: string | boolean;
+// }
+
+// const ProjectWrapper = styled.div<ProjectStyledProps>`
 const ProjectWrapper = styled.div`
   background: linear-gradient(
       rgba(255, 233, 141, 0.3),
@@ -34,6 +42,7 @@ const ProjectImgContainer = styled.div`
   }
 `;
 
+// const ProjectCopyWrapper = styled.div<ReversedProps>`
 const ProjectCopyWrapper = styled.div`
   grid-column-start: 2;
   grid-column-end: 12;
@@ -44,6 +53,7 @@ const ProjectCopyWrapper = styled.div`
   border-radius: 5px;
 `;
 
+// const ProjectCopyLinks = styled.div<ReversedProps>`
 const ProjectCopyLinks = styled.div`
   border: 1px solid ${(p) => p.theme.colors.color_3};
   border-radius: 10px;
@@ -79,6 +89,15 @@ const ProjTitleContainer = styled.p`
   padding-bottom: 20px;
 `;
 
+// const Project = (
+//   ghLink: string,
+//   liveLink: string,
+//   projImg: string,
+//   projCopy: string,
+//   projTitle: string,
+//   reversed: boolean,
+//   imgCircle: string
+// ) => {
 const Project = ({
   ghLink,
   liveLink,

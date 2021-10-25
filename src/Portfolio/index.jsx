@@ -19,6 +19,7 @@ import {
 import rusty_chat_img from "./assets/rusty_chat_code.png";
 import cms_background from "./assets/cms_background.png";
 import tensor_proj from "./assets/tensor_proj.png";
+import freedive_img from "./assets/freedive.png";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
@@ -54,8 +55,17 @@ const Portfolio = () => {
         ghLink={"https://github.com/AJTJ/rusty_chat"}
         projImg={rusty_chat_img}
         projCopy={
-          "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor framework."
+          "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor framework. Containerized with docker and served on digital ocean."
         }
+      />
+      <Project
+        projTitle={"free_source"}
+        ghLink={"https://github.com/AJTJ/free_source"}
+        projImg={freedive_img}
+        projCopy={
+          "A RESTful server that records freediving training and performance information.  Built with NestJS, GraphQL, PostgreSQL, TypeORM, PassportJS, and Redis. Currently building out a React Native app as well as web front-end."
+        }
+        // reversed={true}
       />
       <Project
         projTitle={"The YLC CMS"}
@@ -76,6 +86,7 @@ const Portfolio = () => {
         }
         // reversed={true}
       />
+
       <Element name="contact">
         <Contact />
       </Element>

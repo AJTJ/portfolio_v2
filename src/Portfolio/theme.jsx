@@ -1,6 +1,6 @@
 import React from "react";
 import facepaint from "facepaint";
-import { Global as EmoGlobal, css } from "@emotion/react";
+import { Global as EmoGlobal, css, Theme } from "@emotion/react";
 
 // MQ EXAMPLES
 // ${mq[1]} {
@@ -17,7 +17,7 @@ import { Global as EmoGlobal, css } from "@emotion/react";
 // ${mq[1]} {
 //   font-size: 30px;
 // }
-// ${mq[0]} {
+// ${mq[0]} {s
 //   font-size: 20px;
 // }
 
@@ -51,24 +51,26 @@ export const theme = {
   },
 };
 
-export const Global = () => (
-  <EmoGlobal
-    styles={(p) => css`
-      * {
-        box-sizing: border-box;
-      }
-      p {
-        margin: 0;
-      }
-      body {
-        margin: 0;
-        // default text color
-        color: #514d4f;
-        a {
-          text-decoration: none;
-          color: ${(p) => p.theme.colors.color_1};
+export const Global = () => {
+  return (
+    <EmoGlobal
+      styles={(p) => css`
+        * {
+          box-sizing: "border-box";
         }
-      }
-    `}
-  />
-);
+        p {
+          margin: 0;
+        }
+        body {
+          margin: 0;
+          // default text color
+          color: #514d4f;
+          a {
+            text-decoration: none;
+            color: ${(p) => p.theme.colors.color_1};
+          }
+        }
+      `}
+    />
+  );
+};
