@@ -15,6 +15,7 @@ import js from "./icons/js.png";
 import ellipsis from "./icons/ellipsis.png";
 import three from "./icons/three.png";
 import sql from "./icons/sql-server.png";
+import gql from "./icons/gql.png";
 
 const toolArray = [
   rust,
@@ -28,6 +29,7 @@ const toolArray = [
   js,
   ellipsis,
   sql,
+  gql,
 ];
 
 const AboutWrapper = styled.div`
@@ -132,32 +134,44 @@ const SkillGroup = styled.div`
 `;
 
 const SkillGroupOne = styled(SkillGroup)`
-  padding-left: 100px;
+  padding-left: 50px;
   ${mq[1]} {
     padding-left: 15px;
   }
+`;
+
+const MiddleSkills = styled.div`
+  display: flex;
 `;
 
 const SkillGroupTwo = styled(SkillGroup)`
-  padding-left: 75px;
+  min-width: 50%;
+  padding-left: 25px;
   ${mq[1]} {
     padding-left: 15px;
   }
 `;
-
 const SkillGroupThree = styled(SkillGroup)`
-  padding-left: 100px;
+  min-width: 50%;
+  padding-left: 25px;
   ${mq[1]} {
     padding-left: 15px;
   }
 `;
 
 const SkillGroupFour = styled(SkillGroup)`
-  padding-left: 125px;
+  padding-left: 50px;
   ${mq[1]} {
     padding-left: 15px;
   }
 `;
+
+// const SkillGroupFour = styled(SkillGroup)`
+//   padding-left: 125px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
 // const TwoSkillGroups = styled.div`
 //   display: flex;
@@ -243,21 +257,29 @@ const About = ({ scrollPosition }) => {
             </SkillGroupOne>
             {/* </SkillGroupOneWrapper> */}
             {/* <TwoSkillGroups> */}
-            <SkillGroupTwo>
-              <SkillSection>Rust</SkillSection>
-              <Skill>Actix-Web</Skill>
-              <Skill>Tokio</Skill>
-              <Skill>WASM</Skill>
-              <Skill>Nannou</Skill>
-            </SkillGroupTwo>
-            <SkillGroupThree>
+            <MiddleSkills>
+              <SkillGroupTwo>
+                <SkillSection>Rust</SkillSection>
+                <Skill>Actix-Web</Skill>
+                <Skill>Tokio</Skill>
+                <Skill>Rocket</Skill>
+                <Skill>Nannou</Skill>
+              </SkillGroupTwo>
+              <SkillGroupThree>
+                <SkillSection>Other</SkillSection>
+                <Skill>GraphQL</Skill>
+                <Skill>WASM</Skill>
+              </SkillGroupThree>
+            </MiddleSkills>
+            <SkillGroupFour>
               <SkillSection>Infrastructure/DB</SkillSection>
               <Skill>Docker</Skill>
               <Skill>SQLite</Skill>
               <Skill>PostgreSQL</Skill>
+              <Skill>NGINX</Skill>
               <Skill>MongoDB</Skill>
               <Skill>Kubernetes</Skill>
-            </SkillGroupThree>
+            </SkillGroupFour>
             {/* <SkillGroupFour>
               <SkillSection>More!</SkillSection>
               <Skill>CSS</Skill>
