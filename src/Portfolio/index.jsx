@@ -53,19 +53,11 @@ const Portfolio = () => {
       <Project
         projTitle={"rusty_chat"}
         ghLink={"https://github.com/AJTJ/rusty_chat"}
+        liveLink={"https://ajtj.github.io/chat_frontend/"}
         projImg={rusty_chat_img}
         projCopy={
           "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor framework. Containerized with docker and served on digital ocean."
         }
-      />
-      <Project
-        projTitle={"free_source"}
-        ghLink={"https://github.com/AJTJ/free_source"}
-        projImg={freedive_img}
-        projCopy={
-          "A RESTful server that records freediving training and performance information.  Built with NestJS, GraphQL, PostgreSQL, TypeORM, PassportJS, and Redis. Currently building out a React Native app as well as web front-end."
-        }
-        // reversed={true}
       />
       <Project
         projTitle={"The YLC CMS"}
@@ -74,6 +66,15 @@ const Portfolio = () => {
         projImg={cms_background}
         projCopy={
           "A custom CMS built using react-static, NetlifyCMS and distributed over Netlify for a neat, git-based system."
+        }
+        // reversed={true}
+      />
+      <Project
+        projTitle={"free_source"}
+        ghLink={"https://github.com/AJTJ/free_source"}
+        projImg={freedive_img}
+        projCopy={
+          "A RESTful server that records freediving training and performance information.  Built with NestJS, GraphQL, PostgreSQL, TypeORM, PassportJS, and Redis. Currently building out a React Native app as well as web front-end."
         }
         // reversed={true}
       />
