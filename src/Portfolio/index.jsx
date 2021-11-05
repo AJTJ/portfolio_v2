@@ -20,6 +20,7 @@ import rusty_chat_img from "./assets/rusty_chat_code.png";
 import cms_background from "./assets/cms_background.png";
 import tensor_proj from "./assets/tensor_proj.png";
 import freedive_img from "./assets/freedive.png";
+import gravity_img from "./assets/gravity_ball.png";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
@@ -56,7 +57,7 @@ const Portfolio = () => {
         liveLink={"https://ajtj.github.io/chat_frontend/"}
         projImg={rusty_chat_img}
         projCopy={
-          "A high performance websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor model. Containerized with docker and served on digital ocean with an nginx reverse proxy."
+          "A high performance, extremely light-weight websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor model. Currently containerized with docker and served on digital ocean with an nginx reverse proxy."
         }
       />
       <Project
@@ -84,6 +85,15 @@ const Portfolio = () => {
         projImg={tensor_proj}
         projCopy={
           "A node implementation of TensorFlow's Universal Sentence Encoder that compares the similarity of a sentence and a response based on dimensional embeddings. A monorepo with react as a front-end."
+        }
+        // reversed={true}
+      />
+      <Project
+        projTitle={"Gravity Ball V2"}
+        ghLink={"https://github.com/AJTJ/gravity_ball_v2"}
+        projImg={gravity_img}
+        projCopy={
+          "A physics-based game made with BabylonJS. Don't fall off the platform!"
         }
         // reversed={true}
       />
