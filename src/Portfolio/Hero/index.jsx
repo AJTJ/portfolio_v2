@@ -1,15 +1,33 @@
 import React, { useRef, useEffect } from "react";
 
 import styled from "@emotion/styled";
+import { jsx, css, keyframes } from "@emotion/react";
 import { MarginedContainer } from "../layout";
 import { mq } from "../theme";
 import headshot from "../assets/linked_img.jpeg";
 // import { isCompositeComponentWithType } from "react-dom/test-utils";
 
-const circleSize = "300";
+const circleSize = "700";
+const boxShadowParams = "55px -20px 100px 70px";
+
+const animation = (color1, color2) => keyframes`
+  0% {
+    background-color: ${color1};
+    box-shadow: ${boxShadowParams} ${color1};
+  }
+  50% {
+    background-color: ${color2};
+    box-shadow: ${boxShadowParams} ${color2};
+  }
+  100%  {
+    background-color: ${color1};
+    box-shadow: ${boxShadowParams} ${color1};
+  }
+`;
 
 const BackgroundCircle = styled.div`
   position: absolute;
+
   left: ${(p) =>
     `calc( 50% - ${circleSize / 2}px - 50px + calc(-${
       p?.scrollPosition
@@ -25,10 +43,17 @@ const BackgroundCircle = styled.div`
     p?.scrollPosition
       ? `calc(${circleSize}px + calc(${p.scrollPosition}px * 10))`
       : `${circleSize}px`};
+  box-shadow: ${boxShadowParams} ${(p) => p.theme.colors.color_1};
   background: ${(p) => p.theme.colors.color_1};
   border-radius: 50%;
   z-index: -50;
-  box-shadow: 55px -20px 100px 70px ${(p) => p.theme.colors.color_1};
+  animation: ${(p) =>
+      p?.scrollPosition
+        ? animation(p.theme.colors.color_1, p.theme.colors.color_1_lighter)
+        : "none"}
+    14s ease
+    ${(p) =>
+      p?.scrollPosition ? (p.scrollPosition < 900 ? "infinite" : "2s") : "2s"};
 `;
 
 const HeroContainer = styled.div`
@@ -97,6 +122,7 @@ const Hero = ({ scrollPosition }) => {
       </NameContainer>
       <MarginedContainer>
         <Title>Full-Stack Engineer and Creative Coder.</Title>
+        <Title>Programming Polyglot Proliferating Poignant Prose.</Title>
       </MarginedContainer>
       {/* <MarginedContainer>
         <canvas ref={canvasRef} width="1000" height="800" />

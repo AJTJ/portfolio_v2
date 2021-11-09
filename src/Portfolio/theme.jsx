@@ -39,6 +39,7 @@ export const theme = {
   colors: {
     // the yellow highlight
     color_1: "#FFE98D",
+    color_1_lighter: "#ffeda4",
     //old color_1: "#F7CB15",
     // the grey
     color_2: "#EAEAEA",
