@@ -168,11 +168,23 @@ export const ProjectsTitle = () => {
       <MarginedContainer>
         <ProjectsTitleStyled>Some Projects</ProjectsTitleStyled>
         <Caution>
+          <CautionSpan>
+            More on my{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/AJTJ"
+            >
+              Github
+            </a>
+          </CautionSpan>
+        </Caution>
+        <Caution>
           <CautionSpan role="img" aria-label="construction emoji">
             🚧
           </CautionSpan>
           <CautionSpan>
-            <strong>Caution! || Potentially Experimental</strong>
+            <strong>Experimental. Be aware.</strong>
           </CautionSpan>
           <CautionSpan role="img" aria-label="construction emoji">
             🚧
