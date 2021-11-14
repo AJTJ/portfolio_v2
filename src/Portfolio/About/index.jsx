@@ -142,6 +142,9 @@ const SkillGroupOne = styled(SkillGroup)`
 
 const MiddleSkills = styled.div`
   display: flex;
+  ${mq[1]} {
+    flex-direction: column;
+  }
 `;
 
 const SkillGroupTwo = styled(SkillGroup)`
