@@ -76,24 +76,23 @@ const InnerDiv = styled.div`
   &:before {
     content: "";
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     /* border: 2px solid black; */
     border-radius: 100%;
   }
 `;
 
 const InnerImg = styled.img`
-  height: ${660 / toolArray.length + "px"};
+  height: ${800 / toolArray.length + "px"};
 `;
 
 const circleComponent = (givenArray) => {
   const newArray = [...givenArray];
+
   const CreateInnerDivs = ({ myArray }) => {
-    console.log(myArray);
     let currentImg = myArray[0];
     myArray.splice(0, 1);
-    console.log(currentImg);
     return (
       <InnerDiv>
         <InnerImg src={currentImg} alt="" />
@@ -215,11 +214,8 @@ const About = ({ scrollPosition }) => {
             Hi, I'm Aaron. I'm a full stack engineer and creative code
             enthusiast.
           </Text>
-          <Text>
-            I have a passion for project architecture and for scalable,
-            performant solutions. This has led me to dig into all sorts of
-            languages and tools.
-          </Text>
+          <Text>I have a passion for scalable, performant architecture.</Text>
+          <Text>I dig into all sorts of languages and tools.</Text>
           <Text>
             Check out my{" "}
             <GitLink
@@ -239,7 +235,6 @@ const About = ({ scrollPosition }) => {
             </GitLink>
             .
           </Text>
-          <Text>Here's some tools I've worked with:</Text>
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>

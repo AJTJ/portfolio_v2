@@ -121,8 +121,8 @@ const Hero = ({ scrollPosition }) => {
         </ImgContainer>
       </NameContainer>
       <MarginedContainer>
-        <Title>Full-Stack Engineer and Creative Coder.</Title>
-        <Title>Programming Polyglot Proliferating Poignant Prose.</Title>
+        <Title>Full-Stack Engineer with over 5 years experience</Title>
+        <Title>Programming Polyglot Proliferating Poignant Prose</Title>
       </MarginedContainer>
       {/* <MarginedContainer>
         <canvas ref={canvasRef} width="1000" height="800" />

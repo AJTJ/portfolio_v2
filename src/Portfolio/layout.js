@@ -7,6 +7,7 @@ export const Text = styled.div`
   /* grid-column: span 12; */
   grid-column-start: 2;
   grid-column-end: 12;
+  padding: 5px 0;
 `;
 
 export const Grid = styled.div`
