@@ -32,6 +32,9 @@ const toolArray = [
   gql,
 ];
 
+let iconSizer = 1100;
+const approxCircleSize = "490px";
+
 const AboutWrapper = styled.div`
   background: ${(p) => p.theme.colors.color_2};
   /* background: color_1; */
@@ -64,7 +67,10 @@ const itemRotation = 360 / toolArray.length + "deg";
 
 const InnerDiv = styled.div`
   width: 24px;
-  height: 390px;
+  height: ${approxCircleSize};
+  ${mq[2]} {
+    height: 390px;
+  }
   position: absolute;
   left: 50%;
   top: 50px;
@@ -84,7 +90,10 @@ const InnerDiv = styled.div`
 `;
 
 const InnerImg = styled.img`
-  height: ${800 / toolArray.length + "px"};
+  height: ${iconSizer / toolArray.length + "px"};
+  ${mq[2]} {
+    height: ${800 / toolArray.length + "px"};
+  }
 `;
 
 const circleComponent = (givenArray) => {
