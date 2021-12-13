@@ -66,6 +66,11 @@ export const Global = () => {
           margin: 0;
           // default text color
           color: #514d4f;
+          font-size: 20px;
+          font-family: "Open Sans", sans-serif;
+          button {
+            font-family: "Open Sans", sans-serif;
+          }
           a {
             text-decoration: none;
             color: ${(p) => p.theme.colors.color_1};

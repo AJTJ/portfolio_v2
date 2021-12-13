@@ -25,6 +25,7 @@ const ProjectWrapper = styled.div`
         : p.theme.colors.color_1};
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   padding: 90px 0;
   color: black;
 `;
@@ -44,12 +45,11 @@ const ProjectImgContainer = styled.div`
 
 // const ProjectCopyWrapper = styled.div<ReversedProps>`
 const ProjectCopyWrapper = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 12;
+  grid-column-start: 1;
+  grid-column-end: 13;
   order: ${(p) => (p.reversed ? -1 : 2)};
   display: flex;
   align-items: center;
-
   border-radius: 5px;
 `;
 
@@ -63,7 +63,7 @@ const ProjectCopyLinks = styled.div`
   right: ${(p) => (p.reversed ? "-100px" : "100px")};
   background: ${(p) =>
     p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
-  padding: 15px;
+  padding: 50px 30px;
 `;
 
 const ProjectLinks = styled.div`
@@ -159,7 +159,8 @@ const Caution = styled.div`
 `;
 
 const CautionSpan = styled.span`
-  padding: 0 5px;
+  display: inline-block;
+  padding: 10px 5px;
 `;
 
 export const ProjectsTitle = () => {
@@ -169,25 +170,21 @@ export const ProjectsTitle = () => {
         <ProjectsTitleStyled>Some Projects</ProjectsTitleStyled>
         <Caution>
           <CautionSpan>
-            More on my{" "}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/AJTJ"
-            >
-              Github
-            </a>
+            <strong>
+              More on my{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/AJTJ"
+              >
+                Github
+              </a>
+            </strong>
           </CautionSpan>
         </Caution>
         <Caution>
-          <CautionSpan role="img" aria-label="construction emoji">
-            🚧
-          </CautionSpan>
           <CautionSpan>
-            <strong>Experimental. Be aware.</strong>
-          </CautionSpan>
-          <CautionSpan role="img" aria-label="construction emoji">
-            🚧
+            <strong>These may be experimental</strong>
           </CautionSpan>
         </Caution>
       </MarginedContainer>

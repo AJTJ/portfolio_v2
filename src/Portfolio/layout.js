@@ -36,8 +36,9 @@ export const SectionTitle = styled.div`
 export const zNav = 50;
 
 export const Button = styled.button`
+  font-size: 16px;
   height: 30px;
-  width: 65px;
+  width: 70px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 17px;
   border: solid 1px ${(p) => p.theme.colors.color_3};
