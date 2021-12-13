@@ -25,7 +25,7 @@ const ProjectWrapper = styled.div`
         : p.theme.colors.color_1};
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px 0;
+  padding: 90px 0;
   color: black;
 `;
 

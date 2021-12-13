@@ -21,6 +21,7 @@ import cms_background from "./assets/cms_background.png";
 import tensor_proj from "./assets/tensor_proj.png";
 import freedive_img from "./assets/freedive.png";
 import gravity_img from "./assets/gravity_ball.png";
+import auction_img from "./assets/auction.jpeg";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
@@ -76,6 +77,15 @@ const Portfolio = () => {
         projImg={freedive_img}
         projCopy={
           "A RESTful server that records freediving training and performance information.  Built with NestJS, GraphQL, PostgreSQL, TypeORM, PassportJS, and Redis. Currently building out a React Native app as well as web front-end."
+        }
+        // reversed={true}
+      />
+      <Project
+        projTitle={"dutch_auction"}
+        ghLink={"https://github.com/AJTJ/dutch_auction"}
+        projImg={auction_img}
+        projCopy={
+          "A dutch auction program built with Anchor for the Solana blockchain. Programs on the blockchain are stateless, small, and secure."
         }
         // reversed={true}
       />
