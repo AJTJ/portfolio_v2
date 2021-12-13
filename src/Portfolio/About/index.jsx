@@ -269,7 +269,9 @@ const About = ({ scrollPosition }) => {
                 <SkillSection>Rust</SkillSection>
                 <Skill>Actix-Web</Skill>
                 <Skill>Tokio</Skill>
+                <Skill>Anchor/Solana</Skill>
                 <Skill>Rocket</Skill>
+                <Skill>Diesel</Skill>
                 <Skill>Nannou</Skill>
               </SkillGroupTwo>
               <SkillGroupThree>
