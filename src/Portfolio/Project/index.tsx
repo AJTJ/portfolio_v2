@@ -4,15 +4,14 @@ import { MarginedContainer, SectionTitle } from "../layout";
 import github from "../assets/github.png";
 import globe from "../assets/globe.png";
 
-// interface ReversedProps {
-//   reversed: boolean;
-// }
-// interface ProjectStyledProps extends ReversedProps {
-//   image: string | boolean;
-// }
+interface ReversedProps {
+  reversed: boolean;
+}
+interface ProjectStyledProps extends ReversedProps {
+  image: string | boolean;
+}
 
-// const ProjectWrapper = styled.div<ProjectStyledProps>`
-const ProjectWrapper = styled.div`
+const ProjectWrapper = styled.div<ProjectStyledProps>`
   background: linear-gradient(
       rgba(255, 233, 141, 0.3),
       rgba(255, 233, 141, 0.3)
@@ -20,7 +19,7 @@ const ProjectWrapper = styled.div`
     ${(p) =>
       p.image
         ? `url(${p.image})`
-        : p.reversed
+        : p?.reversed
         ? p.theme.colors.color_4
         : p.theme.colors.color_1};
   background-repeat: no-repeat;
@@ -43,8 +42,7 @@ const ProjectImgContainer = styled.div`
   }
 `;
 
-// const ProjectCopyWrapper = styled.div<ReversedProps>`
-const ProjectCopyWrapper = styled.div`
+const ProjectCopyWrapper = styled.div<ReversedProps>`
   grid-column-start: 1;
   grid-column-end: 13;
   order: ${(p) => (p.reversed ? -1 : 2)};
@@ -53,13 +51,8 @@ const ProjectCopyWrapper = styled.div`
   border-radius: 5px;
 `;
 
-// const ProjectCopyLinks = styled.div<ReversedProps>`
-const ProjectCopyLinks = styled.div`
-  /* border: 1px solid ${(p) => p.theme.colors.color_3}; */
-  /* border-radius: 10px; */
+const ProjectCopyLinks = styled.div<ReversedProps>`
   width: 100%;
-  /* position: relative; */
-  /* top: 20px; */
   right: ${(p) => (p.reversed ? "-100px" : "100px")};
   background: ${(p) =>
     p.reversed ? p.theme.colors.color_4 : p.theme.colors.color_1};
@@ -89,15 +82,16 @@ const ProjTitleContainer = styled.p`
   padding-bottom: 20px;
 `;
 
-// const Project = (
-//   ghLink: string,
-//   liveLink: string,
-//   projImg: string,
-//   projCopy: string,
-//   projTitle: string,
-//   reversed: boolean,
-//   imgCircle: string
-// ) => {
+interface ProjectProps {
+  ghLink: string;
+  projImg: string;
+  projCopy: string;
+  liveLink?: string;
+  projTitle: string;
+  reversed?: boolean;
+  imgCircle?: string;
+}
+
 const Project = ({
   ghLink,
   liveLink,
@@ -106,17 +100,17 @@ const Project = ({
   projTitle,
   reversed,
   imgCircle,
-}) => {
+}: ProjectProps) => {
   return (
-    <ProjectWrapper image={!imgCircle && projImg} {...{ reversed }}>
+    <ProjectWrapper image={!imgCircle && projImg} {...{ reversed: !!reversed }}>
       <ProjectContainer>
         {imgCircle && projImg && (
           <ProjectImgContainer>
             <img src={projImg} alt="" />
           </ProjectImgContainer>
         )}
-        <ProjectCopyWrapper {...{ reversed }}>
-          <ProjectCopyLinks {...{ reversed }}>
+        <ProjectCopyWrapper {...{ reversed: !!reversed }}>
+          <ProjectCopyLinks {...{ reversed: !!reversed }}>
             <ProjTitleContainer>
               {projTitle || "Project Title"}
             </ProjTitleContainer>

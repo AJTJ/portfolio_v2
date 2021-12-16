@@ -3,7 +3,7 @@ import Portfolio from "./Portfolio";
 import { ThemeProvider } from "@emotion/react";
 import { theme, Global } from "./Portfolio/theme";
 
-const App = (props) => {
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Global />

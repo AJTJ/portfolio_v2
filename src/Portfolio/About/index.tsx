@@ -88,7 +88,6 @@ const InnerDiv = styled.div`
     display: block;
     width: 15px;
     height: 15px;
-    /* border: 2px solid black; */
     border-radius: 100%;
   }
 `;
@@ -100,28 +99,38 @@ const InnerImg = styled.img`
   }
 `;
 
-const circleComponent = (givenArray: string[]) => {
-  // const newArray = [...givenArray];
-
-  const CreateInnerDivs = ({ givenArray }: { givenArray: string[] }) => {
-    let currentImg = givenArray[0];
-    givenArray.splice(0, 1);
-    return (
-      <InnerDiv>
-        <InnerImg src={currentImg} alt="" />
-        {!!givenArray.length && CreateInnerDivs({ givenArray })}
-      </InnerDiv>
-    );
-  };
-
-  return CreateInnerDivs({ givenArray });
+const CircleComponent = ({ givenArray }: { givenArray: string[] }) => {
+  let child: null | JSX.Element = null;
+  givenArray
+    .slice()
+    .reverse()
+    .forEach((currentImg: string) => {
+      const element = (
+        <InnerDiv>
+          <InnerImg src={currentImg} alt="" />
+          {child}
+        </InnerDiv>
+      );
+      child = element;
+    });
+  return child;
 };
+
+// const CircleComponent = ({givenArray}) => {
+//     return myArray.slice().reverse().reduce((child, currentImg) => {
+//         return <InnerDiv>
+//             <InnerImg src={currentImg} alt="" />
+//             {child}
+//         </InnerDiv>
+//     }, null)
+// }
 
 const IconCircle = ({ scrollPosition }: { scrollPosition: number }) => {
   return (
     <IconCircleContainer>
       <IconCircleGuide scrollPosition={scrollPosition}>
-        {circleComponent(toolArray)}
+        {/* {circleComponent(toolArray)} */}
+        <CircleComponent givenArray={toolArray} />
       </IconCircleGuide>
     </IconCircleContainer>
   );
@@ -181,19 +190,6 @@ const SkillGroupFour = styled(SkillGroup)`
   }
 `;
 
-// const SkillGroupFour = styled(SkillGroup)`
-//   padding-left: 125px;
-//   ${mq[1]} {
-//     padding-left: 15px;
-//   }
-// `;
-
-// const TwoSkillGroups = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   width: 100%;
-// `;
-
 const Skill = styled.div`
   font-size: 20px;
   padding-left: 10px;
@@ -251,12 +247,8 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
         </MarginedContainer>
       </AboutWrapper>
       <SkillsWrapper>
-        <MarginedContainer>
-          {/* <SecondSection>Skills</SecondSection> */}
-        </MarginedContainer>
         <SkillCircleContainer>
           <SkillsList>
-            {/* <SkillGroupOneWrapper> */}
             <SkillGroupOne>
               <SkillSection>Javascript/TypeScript</SkillSection>
               <Skill>Node</Skill>
@@ -266,8 +258,6 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
               <Skill>ThreeJS</Skill>
               <Skill>CSS-in-JS</Skill>
             </SkillGroupOne>
-            {/* </SkillGroupOneWrapper> */}
-            {/* <TwoSkillGroups> */}
             <MiddleSkills>
               <SkillGroupTwo>
                 <SkillSection>Rust</SkillSection>
@@ -293,13 +283,6 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
               <Skill>MongoDB</Skill>
               <Skill>Kubernetes</Skill>
             </SkillGroupFour>
-            {/* <SkillGroupFour>
-              <SkillSection>More!</SkillSection>
-              <Skill>CSS</Skill>
-              <Skill>Docker</Skill>
-              <Skill>SQLite</Skill>
-            </SkillGroupFour> */}
-            {/* </TwoSkillGroups> */}
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
         </SkillCircleContainer>
@@ -309,3 +292,11 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
 };
 
 export default About;
+
+/* <SkillGroupFour>
+  <SkillSection>More!</SkillSection>
+  <Skill>CSS</Skill>
+  <Skill>Docker</Skill>
+  <Skill>SQLite</Skill>
+</SkillGroupFour> */
+/* </TwoSkillGroups> */

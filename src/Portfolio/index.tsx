@@ -5,15 +5,7 @@ import Nav from "./Nav";
 import About from "./About";
 import Project, { ProjectsTitle } from "./Project";
 import Contact from "./Contact";
-import LiveChat from "./LiveChat";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Element } from "react-scroll";
 
 //PROJECT IMAGES
 import rusty_chat_img from "./assets/rusty_chat_code.png";

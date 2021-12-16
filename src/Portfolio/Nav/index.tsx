@@ -90,13 +90,13 @@ const Nav = ({ scrollPosition }: { scrollPosition: number }) => {
     <NavWrapper {...{ scrollPosition }}>
       <NavContainer>
         <Name onClick={scroll.scrollToTop}>AJ</Name>
-        <First as={Link} offset={-50} smooth={true} to="about">
+        <First offset={-50} smooth={true} to="about">
           About
         </First>
-        <NavButton as={Link} offset={-50} smooth={true} to="projects">
+        <NavButton offset={-50} smooth={true} to="projects">
           Projects
         </NavButton>
-        <NavButton as={Link} smooth={true} to="contact">
+        <NavButton smooth={true} to="contact">
           Contact
         </NavButton>
         <LinkImgWrapper>
