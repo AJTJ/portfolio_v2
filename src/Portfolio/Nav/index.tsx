@@ -1,21 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { MarginedContainer, zNav, Button as NavButton } from "../layout";
+import { MarginedContainer, zNav, Button as NavButtonImport } from "../layout";
 import { mq } from "../theme";
 import linked from "../assets/linked.png";
 import github from "../assets/github.png";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-// test
+interface NavProps {
+  scrollPosition: number;
+}
 
-const NavWrapper = styled.div`
+const NavWrapper = styled.div<NavProps>`
   position: fixed;
   width: 100%;
   height: 60px;
@@ -33,6 +28,10 @@ const NavContainer = styled(MarginedContainer)`
   padding: 5px 0;
   height: 60px;
 `;
+
+const NavButtonLink = styled(Link)``;
+
+const NavButton = NavButtonImport.withComponent(NavButtonLink);
 
 const First = styled(NavButton)`
   grid-column-start: 8;
@@ -86,7 +85,7 @@ const Name = styled.a`
   /* padding-left: 10px; */
 `;
 
-const Nav = ({ scrollPosition }) => {
+const Nav = ({ scrollPosition }: { scrollPosition: number }) => {
   return (
     <NavWrapper {...{ scrollPosition }}>
       <NavContainer>

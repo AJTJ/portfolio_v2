@@ -1,5 +1,5 @@
 import React from "react";
-import { MarginedContainer, SectionTitle } from "../layout";
+import { MarginedContainer } from "../layout";
 import styled from "@emotion/styled";
 
 const ChatWrapper = styled.div`

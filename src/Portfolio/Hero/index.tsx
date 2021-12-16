@@ -1,16 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 
 import styled from "@emotion/styled";
-import { jsx, css, keyframes } from "@emotion/react";
+import { keyframes } from "@emotion/react";
 import { MarginedContainer } from "../layout";
 import { mq } from "../theme";
 import headshot from "../assets/linked_img.jpeg";
 // import { isCompositeComponentWithType } from "react-dom/test-utils";
 
-const circleSize = "700";
-const boxShadowParams = "55px -20px 100px 70px";
+const circleSize: number = 700;
+const boxShadowParams: string = "55px -20px 100px 70px";
 
-const animation = (color1, color2) => keyframes`
+const animation = (color1: string, color2: string) => keyframes`
   0% {
     background-color: ${color1};
     box-shadow: ${boxShadowParams} ${color1};
@@ -25,7 +25,12 @@ const animation = (color1, color2) => keyframes`
   }
 `;
 
-const BackgroundCircle = styled.div`
+interface HeroProps {
+  circleSize?: number;
+  scrollPosition?: number;
+}
+
+const BackgroundCircle = styled.div<HeroProps>`
   position: absolute;
 
   left: ${(p) =>
@@ -109,8 +114,8 @@ const Title = styled.div`
   padding-top: 20px;
 `;
 
-const Hero = ({ scrollPosition }) => {
-  const canvasRef = useRef();
+const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
+  // const canvasRef = useRef();
 
   return (
     <HeroContainer>

@@ -50,7 +50,11 @@ const IconCircleContainer = styled.div`
   }
 `;
 
-const IconCircleGuide = styled.div`
+interface AboutProps {
+  scrollPosition: number;
+}
+
+const IconCircleGuide = styled.div<AboutProps>`
   width: 24px;
   height: 300px;
   position: relative;
@@ -96,24 +100,24 @@ const InnerImg = styled.img`
   }
 `;
 
-const circleComponent = (givenArray) => {
-  const newArray = [...givenArray];
+const circleComponent = (givenArray: string[]) => {
+  // const newArray = [...givenArray];
 
-  const CreateInnerDivs = ({ myArray }) => {
-    let currentImg = myArray[0];
-    myArray.splice(0, 1);
+  const CreateInnerDivs = ({ givenArray }: { givenArray: string[] }) => {
+    let currentImg = givenArray[0];
+    givenArray.splice(0, 1);
     return (
       <InnerDiv>
         <InnerImg src={currentImg} alt="" />
-        {!!myArray.length && CreateInnerDivs({ myArray })}
+        {!!givenArray.length && CreateInnerDivs({ givenArray })}
       </InnerDiv>
     );
   };
 
-  return CreateInnerDivs({ myArray: newArray });
+  return CreateInnerDivs({ givenArray });
 };
 
-const IconCircle = ({ scrollPosition }) => {
+const IconCircle = ({ scrollPosition }: { scrollPosition: number }) => {
   return (
     <IconCircleContainer>
       <IconCircleGuide scrollPosition={scrollPosition}>
@@ -213,7 +217,7 @@ const GitLink = styled.a`
   color: ${(p) => p.theme.colors.orange};
 `;
 
-const About = ({ scrollPosition }) => {
+const About = ({ scrollPosition }: { scrollPosition: number }) => {
   return (
     <>
       <AboutWrapper>
