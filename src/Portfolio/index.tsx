@@ -46,7 +46,7 @@ const Portfolio = () => {
         <ProjectsTitle />
       </Element>
       <Project
-        projTitle={"rusty_chat"}
+        projTitle={"Rusty Chat"}
         ghLink={"https://github.com/AJTJ/rusty_chat"}
         liveLink={"https://ajtj.github.io/chat_frontend/"}
         projImg={rusty_chat_img}
@@ -55,7 +55,7 @@ const Portfolio = () => {
         }
       />
       <Project
-        projTitle={"rabin_karp_wasm_pack"}
+        projTitle={"Rabin Karp - WASM-pack"}
         ghLink={"https://github.com/AJTJ/rabin_karp_wasm"}
         liveLink={"https://www.npmjs.com/package/rabin-karp-wasm/v/0.4.0"}
         projImg={roll}
@@ -74,7 +74,7 @@ const Portfolio = () => {
         // reversed={true}
       />
       <Project
-        projTitle={"free_source"}
+        projTitle={"Free Source"}
         ghLink={"https://github.com/AJTJ/free_source"}
         projImg={freedive_img}
         projCopy={
@@ -83,7 +83,7 @@ const Portfolio = () => {
         // reversed={true}
       />
       <Project
-        projTitle={"dutch_auction"}
+        projTitle={"Solana Dutch Auction"}
         ghLink={"https://github.com/AJTJ/dutch_auction"}
         projImg={auction_img}
         projCopy={
@@ -92,7 +92,7 @@ const Portfolio = () => {
         // reversed={true}
       />
       <Project
-        projTitle={"tensor_compare"}
+        projTitle={"Tensor Sentence Compare"}
         ghLink={"https://github.com/AJTJ/tensor_compare"}
         projImg={tensor_proj}
         projCopy={
