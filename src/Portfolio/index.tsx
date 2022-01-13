@@ -60,7 +60,7 @@ const Portfolio = () => {
         liveLink={"https://www.npmjs.com/package/rabin-karp-wasm/v/0.4.0"}
         projImg={roll}
         projCopy={
-          "This is a rust implementation of the Rabin-Karp string searching algorithm wrapped into a neat npm package for use in node environments. By my rudimentary benchmarks, it runs about 4 to 7 times faster than a pure JS algorithm."
+          "This is a rust implementation of the Rabin-Karp string searching algorithm wrapped into a neat npm package for use in node environments. Given a substring pattern and a larger string sample, it will find all indexes where a valid substring match exists. The efficiency of the algorithm is that it uses a rolling hash to be able to function in linear time.  By my rudimentary benchmarks, it runs about 4 to 7 times faster than a pure JS algorithm."
         }
       />
       <Project
