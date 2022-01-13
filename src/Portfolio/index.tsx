@@ -14,6 +14,7 @@ import tensor_proj from "./assets/tensor_proj.png";
 import freedive_img from "./assets/freedive.png";
 import gravity_img from "./assets/gravity_ball.png";
 import auction_img from "./assets/auction.jpeg";
+import roll from "./assets/roll.jpeg";
 
 const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
@@ -51,6 +52,15 @@ const Portfolio = () => {
         projImg={rusty_chat_img}
         projCopy={
           "A high performance, extremely light-weight websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor model. Currently containerized with docker and served on digital ocean with an nginx reverse proxy."
+        }
+      />
+      <Project
+        projTitle={"rabin_karp_wasm_pack"}
+        ghLink={"https://github.com/AJTJ/rabin_karp_wasm"}
+        liveLink={"https://www.npmjs.com/package/rabin-karp-wasm/v/0.4.0"}
+        projImg={roll}
+        projCopy={
+          "This is a rust implementation of the Rabin-Karp string searching algorithm wrapped into a neat npm package for use in node environments. By my rudimentary benchmarks, it runs about 4 to 7 times faster than a pure JS algorithm."
         }
       />
       <Project
