@@ -51,7 +51,7 @@ const Portfolio = () => {
         liveLink={"https://ajtj.github.io/chat_frontend/"}
         projImg={rusty_chat_img}
         projCopy={
-          "A high performance, extremely light-weight websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor model. Currently containerized with docker and served on digital ocean with an nginx reverse proxy."
+          "An experiment in creating a high performance, websockets chat service built with Rust and Actix/Actix-Web with an SQLite database and custom session management. Digging deeper into the actor model. Currently containerized with docker and served on digital ocean with an nginx reverse proxy."
         }
       />
       <Project
