@@ -250,23 +250,23 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
         <SkillCircleContainer>
           <SkillsList>
             <SkillGroupOne>
-              <SkillSection>Javascript/TypeScript</SkillSection>
-              <Skill>Node</Skill>
-              <Skill>Express</Skill>
-              <Skill>NestJS</Skill>
-              <Skill>React</Skill>
-              <Skill>ThreeJS</Skill>
-              <Skill>CSS-in-JS</Skill>
+              <SkillSection>Rust</SkillSection>
+              <Skill>Actix-Web</Skill>
+              <Skill>Tokio</Skill>
+              <Skill>Anchor/Solana</Skill>
+              <Skill>Rocket</Skill>
+              <Skill>Diesel</Skill>
+              <Skill>Nannou</Skill>
             </SkillGroupOne>
             <MiddleSkills>
               <SkillGroupTwo>
-                <SkillSection>Rust</SkillSection>
-                <Skill>Actix-Web</Skill>
-                <Skill>Tokio</Skill>
-                <Skill>Anchor/Solana</Skill>
-                <Skill>Rocket</Skill>
-                <Skill>Diesel</Skill>
-                <Skill>Nannou</Skill>
+                <SkillSection>Javascript/TypeScript</SkillSection>
+                <Skill>Node</Skill>
+                <Skill>Express</Skill>
+                <Skill>NestJS</Skill>
+                <Skill>React</Skill>
+                <Skill>ThreeJS</Skill>
+                <Skill>CSS-in-JS</Skill>
               </SkillGroupTwo>
               <SkillGroupThree>
                 <SkillSection>Other</SkillSection>
