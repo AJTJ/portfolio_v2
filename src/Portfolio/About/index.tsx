@@ -253,9 +253,9 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
               <SkillSection>Rust</SkillSection>
               <Skill>WASM</Skill>
               <Skill>Actix-Web</Skill>
+              <Skill>Rocket</Skill>
               <Skill>Tokio</Skill>
               <Skill>Anchor/Solana</Skill>
-              <Skill>Rocket</Skill>
               <Skill>Diesel</Skill>
               <Skill>Nannou</Skill>
             </SkillGroupOne>
