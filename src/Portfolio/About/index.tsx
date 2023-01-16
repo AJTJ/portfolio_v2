@@ -58,7 +58,7 @@ const IconCircleGuide = styled.div<AboutProps>`
   width: 24px;
   height: 300px;
   position: relative;
-  left: 50%;
+  left: 70%;
   -webkit-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   -ms-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   transform: rotate(${(p) => p.scrollPosition / 10}deg);
