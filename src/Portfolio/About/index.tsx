@@ -251,6 +251,7 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
           <SkillsList>
             <SkillGroupOne>
               <SkillSection>Rust</SkillSection>
+              <Skill>WASM</Skill>
               <Skill>Actix-Web</Skill>
               <Skill>Tokio</Skill>
               <Skill>Anchor/Solana</Skill>
@@ -268,14 +269,13 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
                 <Skill>ThreeJS</Skill>
                 <Skill>CSS-in-JS</Skill>
               </SkillGroupTwo>
-              <SkillGroupThree>
+              {/* <SkillGroupThree>
                 <SkillSection>Other</SkillSection>
-                <Skill>GraphQL</Skill>
-                <Skill>WASM</Skill>
-              </SkillGroupThree>
+              </SkillGroupThree> */}
             </MiddleSkills>
             <SkillGroupFour>
-              <SkillSection>Infrastructure/DB</SkillSection>
+              <SkillSection>Infrastructure/DB/Other</SkillSection>
+              <Skill>GraphQL</Skill>
               <Skill>Docker</Skill>
               <Skill>SQLite</Skill>
               <Skill>PostgreSQL</Skill>
