@@ -126,7 +126,9 @@ const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
         </ImgContainer>
       </NameContainer>
       <MarginedContainer>
-        <Title>Full-Stack Engineer with over 5 years experience</Title>
+        <Title>
+          Full-Stack and Systems Developer with over 5 years experience
+        </Title>
         {/* <Title>Programming Polyglot Proliferating Poignant Prose</Title> */}
       </MarginedContainer>
       {/* <MarginedContainer>
