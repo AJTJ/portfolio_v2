@@ -127,7 +127,8 @@ const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
       </NameContainer>
       <MarginedContainer>
         <Title>
-          Full-Stack and Systems Developer with over 5 years experience
+          Experienced Systems Developer with a passion for scaling and
+          performant architecture.
         </Title>
         {/* <Title>Programming Polyglot Proliferating Poignant Prose</Title> */}
       </MarginedContainer>
