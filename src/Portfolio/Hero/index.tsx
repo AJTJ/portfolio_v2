@@ -127,8 +127,8 @@ const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
       </NameContainer>
       <MarginedContainer>
         <Title>
-          Experienced Systems Developer with a passion for scaling and
-          performant architecture.
+          Systems Developer with a passion for scaling and performant
+          architecture.
         </Title>
         {/* <Title>Programming Polyglot Proliferating Poignant Prose</Title> */}
       </MarginedContainer>
