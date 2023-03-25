@@ -66,13 +66,23 @@ const ProjectLinks = styled.div`
 `;
 
 const Link = styled.a`
-  display: inline-block;
-  width: 25px;
+  /* display: inline-block; */
+  display: flex;
+  align-items: center;
+  /* width: 25px; */
   height: 25px;
   margin: 0 5px;
 
+  span {
+    font-size: 15px;
+    padding-right: 5px;
+    color: black;
+  }
+
   img {
     width: 100%;
+    width: 25px;
+    height: 25px;
   }
 `;
 
@@ -82,8 +92,13 @@ const ProjTitleContainer = styled.p`
   padding-bottom: 20px;
 `;
 
+interface GhObject {
+  title?: string;
+  link: string;
+}
+
 interface ProjectProps {
-  ghLink: string;
+  ghLinks: GhObject[];
   projImg: string;
   projCopy: string;
   liveLink?: string;
@@ -93,7 +108,7 @@ interface ProjectProps {
 }
 
 const Project = ({
-  ghLink,
+  ghLinks,
   liveLink,
   projImg,
   projCopy,
@@ -101,6 +116,13 @@ const Project = ({
   reversed,
   imgCircle,
 }: ProjectProps) => {
+  const ghObs = ghLinks?.map(({ title, link }) => (
+    <Link href={link} target="_blank" rel="noopener noreferrer">
+      {title && <span>{title}</span>}
+      <img src={github} alt="" />
+    </Link>
+  ));
+
   return (
     <ProjectWrapper image={!imgCircle && projImg} {...{ reversed: !!reversed }}>
       <ProjectContainer>
@@ -116,11 +138,12 @@ const Project = ({
             </ProjTitleContainer>
             <p>{projCopy || "A bunch of copy about the project"}</p>
             <ProjectLinks>
-              {ghLink && (
+              {/* {ghLink && (
                 <Link href={ghLink} target="_blank" rel="noopener noreferrer">
                   <img src={github} alt="" />
                 </Link>
-              )}
+              )} */}
+              {ghObs}
               {liveLink && (
                 <Link href={liveLink} target="_blank" rel="noopener noreferrer">
                   <img src={globe} alt="" />
