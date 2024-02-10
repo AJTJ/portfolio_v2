@@ -66,7 +66,7 @@ const HeroContainer = styled.div`
   min-height: 1000px;
   overflow: hidden;
   position: relative;
-  background-color: black;
+  background-color: ${(p) => p.theme.colors.color_4};
 `;
 
 const CircleContainer = styled.div``;

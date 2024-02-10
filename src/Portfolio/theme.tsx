@@ -30,8 +30,8 @@ export const theme = {
     color_1_lighter: "#ffeda4",
 
     // the general background
-    color_2: "#080505",
-    // color_2: "#EAEAEA",
+    // color_2: "#080505",
+    color_2: "#EAEAEA",
     //old color_2: "#9D8DF1",
 
     // the dark purple

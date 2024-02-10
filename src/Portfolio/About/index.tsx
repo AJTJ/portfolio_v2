@@ -175,13 +175,13 @@ const SkillGroupTwo = styled(SkillGroup)`
     padding-left: 15px;
   }
 `;
-const SkillGroupThree = styled(SkillGroup)`
-  min-width: 50%;
-  padding-left: 25px;
-  ${mq[1]} {
-    padding-left: 15px;
-  }
-`;
+// const SkillGroupThree = styled(SkillGroup)`
+//   min-width: 50%;
+//   padding-left: 25px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
 const SkillGroupFour = styled(SkillGroup)`
   padding-left: 50px;
