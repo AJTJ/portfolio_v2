@@ -33,7 +33,7 @@ export const SectionTitle = styled.div`
   padding-top: 30px;
 `;
 
-export const zNav = 50;
+export const zNav = 500;
 
 export const Button = styled.button`
   font-size: 16px;

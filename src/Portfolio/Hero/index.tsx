@@ -51,7 +51,7 @@ const BackgroundCircle = styled.div<HeroProps>`
   box-shadow: ${boxShadowParams} ${(p) => p.theme.colors.color_1};
   background: ${(p) => p.theme.colors.color_1};
   border-radius: 50%;
-  z-index: -50;
+  /* z-index: 50; */
   animation: ${(p) =>
       p?.scrollPosition
         ? animation(p.theme.colors.color_1, p.theme.colors.color_1_lighter)
@@ -66,6 +66,7 @@ const HeroContainer = styled.div`
   min-height: 1000px;
   overflow: hidden;
   position: relative;
+  background-color: black;
 `;
 
 const CircleContainer = styled.div``;
@@ -76,15 +77,19 @@ const NameContainer = styled(MarginedContainer)`
 `;
 
 const Name = styled.div`
-  font-size: 100px;
-  grid-column-start: 2;
-  grid-column-end: 9;
+  font-size: 45px;
+  grid-column-start: 3;
+  grid-column-end: 7;
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   color: ${(p) => p.theme.colors.color_3};
+  z-index: 100;
+  white-space: nowrap;
+  ${mq[2]} {
+    font-size: 35px;
+  }
   ${mq[1]} {
     grid-column: span 12;
-    font-size: 80px;
     /* display: flex;
     justify-content: center; */
     text-align: center;
@@ -93,9 +98,13 @@ const Name = styled.div`
 
 const ImgContainer = styled.div`
   grid-column: span 3;
+  max-width: 200px;
+  z-index: 100;
+  display: flex;
   ${mq[1]} {
     grid-column: span 12;
     display: flex;
+    max-width: unset;
     justify-content: center;
   }
 `;
@@ -105,10 +114,12 @@ const FaceImg = styled.img`
   width: 100%;
   border-radius: 50%;
   max-width: 250px;
+  box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.45);
 `;
 
 const Title = styled.div`
-  grid-column-start: 2;
+  z-index: 100;
+  grid-column-start: 3;
   grid-column-end: 11;
   font-size: 25px;
   padding-top: 20px;

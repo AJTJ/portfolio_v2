@@ -20,6 +20,7 @@ const PortfolioContainer = styled.div`
   /* min-height: 5000px; */
   overflow: hidden;
   -moz-transform: rotate(0.02deg);
+  /* background-color: black; */
 `;
 //
 const Portfolio = () => {

@@ -21,15 +21,22 @@ export const mqNew = (bp: string) => `@media (max-width: ${bp}px)`;
 
 export const theme = {
   colors: {
-    // the yellow highlight
-    color_1: "#FFE98D",
+    // the main colour
+    color_1: "#ffe26f",
+    // color_1: "#7098ff",
+    // color_1: "#FFE98D",
+
+    // the "fade-into" colour
     color_1_lighter: "#ffeda4",
-    //old color_1: "#F7CB15",
-    // the grey
-    color_2: "#EAEAEA",
+
+    // the general background
+    color_2: "#080505",
+    // color_2: "#EAEAEA",
     //old color_2: "#9D8DF1",
+
     // the dark purple
-    color_3: "#381D2A",
+    color_3: "#061843",
+
     // a lighter grey
     color_4: "#f0f0f0",
     orange: "#F6511D",

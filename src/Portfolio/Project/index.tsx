@@ -188,7 +188,7 @@ export const ProjectsTitle = () => {
         <Caution>
           <CautionSpan>
             <strong>
-              More on my{" "}
+              I'm usually more active on my{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
