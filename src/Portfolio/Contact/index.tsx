@@ -51,7 +51,8 @@ const ContactForm = () => {
   }
 
   const myHandleSubmit = (x: React.FormEvent<HTMLFormElement>) => {
-    const ipFormInput = document.getElementById("ip_info");
+    const ipFormInput = document.getElementById("ip_info") as HTMLInputElement;
+
     fetch("https://api.ipify.org?format=json")
       .then((response) => {
         return response.json();
@@ -60,7 +61,7 @@ const ContactForm = () => {
         const ip = json.ip;
         console.log("the ip is: ", ip);
         if (ipFormInput) {
-          ipFormInput.nodeValue = ip;
+          ipFormInput.value = ip;
         }
       })
       .catch((err) => console.error(`Error getting IP Address: ${err}`));
