@@ -51,7 +51,7 @@ const ContactForm = () => {
   }
 
   const myHandleSubmit = (x: React.FormEvent<HTMLFormElement>) => {
-    // const ipFormInput = document.getElementById("ip_info");
+    const ipFormInput = document.getElementById("ip_info");
     fetch("https://api.ipify.org?format=json")
       .then((response) => {
         return response.json();
@@ -59,6 +59,9 @@ const ContactForm = () => {
       .then((json) => {
         const ip = json.ip;
         console.log("the ip is: ", ip);
+        if (ipFormInput) {
+          ipFormInput.nodeValue = ip;
+        }
       })
       .catch((err) => console.error(`Error getting IP Address: ${err}`));
 
@@ -67,7 +70,7 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={myHandleSubmit}>
-      <label htmlFor="email">Email Address 😄</label>
+      <label htmlFor="email">Email Address</label>
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>
