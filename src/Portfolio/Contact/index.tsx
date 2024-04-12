@@ -66,7 +66,7 @@ const ContactForm = () => {
   }
   return (
     <Form onSubmit={(x) => myHandleSubmit(handleSubmit(x))}>
-      <label htmlFor="email">Email Address!</label>
+      <label htmlFor="email">Email Address!!</label>
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>
