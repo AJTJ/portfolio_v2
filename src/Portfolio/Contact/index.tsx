@@ -43,29 +43,30 @@ const Received = styled.div`
 //     })
 //     .catch((err) => { console.error(`Error getting IP Address: ${err}`)
 
-const myHandleSubmit = (formSubmit: any) => {
-  // const ipFormInput = document.getElementById("ip_info");
-  fetch("https://api.ipify.org?format=json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((json) => {
-      const ip = json.ip;
-      console.log("the ip is: ", ip);
-    })
-    .catch((err) => console.error(`Error getting IP Address: ${err}`));
-
-  formSubmit();
-};
-
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xzbypdvr");
 
   if (state.succeeded) {
     return <Received>Got your message!</Received>;
   }
+
+  const myHandleSubmit = (x: React.FormEvent<HTMLFormElement>) => {
+    // const ipFormInput = document.getElementById("ip_info");
+    fetch("https://api.ipify.org?format=json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        const ip = json.ip;
+        console.log("the ip is: ", ip);
+      })
+      .catch((err) => console.error(`Error getting IP Address: ${err}`));
+
+    handleSubmit(x);
+  };
+
   return (
-    <Form onSubmit={(x) => myHandleSubmit(handleSubmit(x))}>
+    <Form onSubmit={myHandleSubmit}>
       <label htmlFor="email">Email Address!!</label>
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
