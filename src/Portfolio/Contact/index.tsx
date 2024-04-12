@@ -35,18 +35,43 @@ const Received = styled.div`
   grid-column-end: 10;
 `;
 
+// fetch('https://api.ipify.org?format=json')
+//     .then((response) => { return response.json() })
+//     .then((json) => {
+//         const ip = json.ip;
+//         ipFormInput.value = ip;
+//     })
+//     .catch((err) => { console.error(`Error getting IP Address: ${err}`)
+
+const myHandleSubmit = (formSubmit: any) => {
+  // const ipFormInput = document.getElementById("ip_info");
+  fetch("https://api.ipify.org?format=json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((json) => {
+      const ip = json.ip;
+      console.log("the ip is: ", ip);
+    })
+    .catch((err) => console.error(`Error getting IP Address: ${err}`));
+
+  formSubmit();
+};
+
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xzbypdvr");
+
   if (state.succeeded) {
     return <Received>Got your message!</Received>;
   }
   return (
-    <Form onSubmit={handleSubmit}>
-      <label htmlFor="email">Email Address</label>
+    <Form onSubmit={() => myHandleSubmit(handleSubmit)}>
+      <label htmlFor="email">Email Address!</label>
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>
       <textarea id="message" name="message" />
+      <input id="ip_info" type="hidden" name="ip_info" />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button type="submit" disabled={state.submitting}>
         Submit
