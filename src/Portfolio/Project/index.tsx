@@ -201,7 +201,9 @@ export const ProjectsTitle = () => {
         </Caution>
         <Caution>
           <CautionSpan>
-            <strong>These may be experimental</strong>
+            <strong>
+              These may be <em>very</em> experimental
+            </strong>
           </CautionSpan>
         </Caution>
       </MarginedContainer>
