@@ -16,6 +16,7 @@ import ellipsis from "./icons/ellipsis.png";
 import three from "./icons/three.png";
 import sql from "./icons/sql-server.png";
 import gql from "./icons/gql.png";
+import python from "./icons/python.png";
 
 const toolArray = [
   rust,
@@ -30,6 +31,7 @@ const toolArray = [
   ellipsis,
   sql,
   gql,
+  python,
 ];
 
 let iconSizer = 1100;
@@ -175,16 +177,17 @@ const SkillGroupTwo = styled(SkillGroup)`
     padding-left: 15px;
   }
 `;
-// const SkillGroupThree = styled(SkillGroup)`
-//   min-width: 50%;
-//   padding-left: 25px;
-//   ${mq[1]} {
-//     padding-left: 15px;
-//   }
-// `;
+
+const SkillGroupThree = styled(SkillGroup)`
+  padding-left: 50px;
+  ${mq[1]} {
+    padding-left: 15px;
+  }
+`;
 
 const SkillGroupFour = styled(SkillGroup)`
-  padding-left: 50px;
+  min-width: 50%;
+  padding-left: 100px;
   ${mq[1]} {
     padding-left: 15px;
   }
@@ -251,37 +254,32 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
           <SkillsList>
             <SkillGroupOne>
               <SkillSection>Rust</SkillSection>
-              <Skill>WASM</Skill>
-              <Skill>Actix-Web</Skill>
-              <Skill>Rocket</Skill>
-              <Skill>Tokio</Skill>
+              <Skill>Actix-Web, Rocket, Axum</Skill>
+              <Skill>Diesel, Async-Graphql</Skill>
+              <Skill>WASM, Tokio</Skill>
               <Skill>Anchor/Solana</Skill>
-              <Skill>Diesel</Skill>
-              <Skill>Nannou</Skill>
             </SkillGroupOne>
             <MiddleSkills>
               <SkillGroupTwo>
                 <SkillSection>Javascript/TypeScript</SkillSection>
-                <Skill>Node</Skill>
-                <Skill>Express</Skill>
-                <Skill>NestJS</Skill>
-                <Skill>React</Skill>
-                <Skill>ThreeJS</Skill>
+                <Skill>Node, Express, NestJS</Skill>
+                <Skill>React, State Management</Skill>
                 <Skill>CSS-in-JS</Skill>
               </SkillGroupTwo>
-              {/* <SkillGroupThree>
-                <SkillSection>Other</SkillSection>
-              </SkillGroupThree> */}
             </MiddleSkills>
+            <SkillGroupThree>
+              <SkillSection>Python, AI & ML</SkillSection>
+              <Skill>RAG systems</Skill>
+              <Skill>Langchain, LangGraph, Llamachain</Skill>
+              <Skill>OpenAI, Anthropic</Skill>
+              <Skill>HuggingFace</Skill>
+            </SkillGroupThree>
             <SkillGroupFour>
-              <SkillSection>Infrastructure/DB/Other</SkillSection>
-              <Skill>GraphQL</Skill>
-              <Skill>Docker</Skill>
-              <Skill>SQLite</Skill>
-              <Skill>PostgreSQL</Skill>
-              <Skill>NGINX</Skill>
-              <Skill>MongoDB</Skill>
-              <Skill>Kubernetes</Skill>
+              <SkillSection>Architecture</SkillSection>
+              <Skill>GraphQL, REST, gRPC</Skill>
+              <Skill>Docker, Kubernetes</Skill>
+              <Skill>NGINX, AWS, Security</Skill>
+              <Skill>PostgreSQL, MongoDB</Skill>
             </SkillGroupFour>
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
@@ -293,10 +291,10 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
 
 export default About;
 
-/* <SkillGroupFour>
+/* <SkillGroupThree>
   <SkillSection>More!</SkillSection>
   <Skill>CSS</Skill>
   <Skill>Docker</Skill>
   <Skill>SQLite</Skill>
-</SkillGroupFour> */
+</SkillGroupThree> */
 /* </TwoSkillGroups> */
