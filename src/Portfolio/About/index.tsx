@@ -276,7 +276,7 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
             </SkillGroupThree>
             <SkillGroupFour>
               <SkillSection>Architecture</SkillSection>
-              <Skill>GraphQL, REST, gRPC</Skill>
+              <Skill>GraphQL, REST</Skill>
               <Skill>Docker, Kubernetes</Skill>
               <Skill>NGINX, AWS, Security</Skill>
               <Skill>PostgreSQL, MongoDB</Skill>

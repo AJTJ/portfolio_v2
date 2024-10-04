@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import { Element } from "react-scroll";
 
 //PROJECT IMAGES
+import trading_img from "./assets/high_freq_img.jpeg";
 import rusty_chat_img from "./assets/rusty_chat_code.png";
 import cms_background from "./assets/cms_background.png";
 import tensor_proj from "./assets/tensor_proj.png";
@@ -30,7 +31,6 @@ const Portfolio = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-  //
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -46,6 +46,18 @@ const Portfolio = () => {
       <Element name="projects">
         <ProjectsTitle />
       </Element>
+      <Project
+        projTitle={"High Frequency Trading Experiments"}
+        ghLinks={[
+          {
+            link: "https://github.com/AJTJ/high_frequency_trading_architecture",
+          },
+        ]}
+        projImg={trading_img}
+        projCopy={
+          "My experiments into how I would begin to think about a high frequency trading platform. The essential goal to maintain super low latency, and high level of concurrency. Using rust and redis, and utilizing consumer groups."
+        }
+      />
       <Project
         projTitle={"Rusty Chat"}
         ghLinks={[{ link: "https://github.com/AJTJ/rusty_chat" }]}

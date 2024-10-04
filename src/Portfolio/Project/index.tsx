@@ -201,8 +201,13 @@ export const ProjectsTitle = () => {
         </Caution>
         <Caution>
           <CautionSpan>
+            <strong>I can't share half of what I do...</strong>
+          </CautionSpan>
+        </Caution>
+        <Caution>
+          <CautionSpan>
             <strong>
-              These may be <em>very</em> experimental
+              These may be <em>VERY</em> experimental
             </strong>
           </CautionSpan>
         </Caution>
