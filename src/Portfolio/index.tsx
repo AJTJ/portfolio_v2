@@ -55,7 +55,7 @@ const Portfolio = () => {
         ]}
         projImg={trading_img}
         projCopy={
-          "My experiments into how I would begin to think about a high frequency trading platform. The essential goal to maintain super low latency, and high level of concurrency. Using rust and redis, and utilizing consumer groups."
+          "My experiment into how I would begin to think about a high frequency trading platform. The goal of this experiment is to maintain strict account-level consistency and transaction ordering but with high throughput. In terms of CAP theorem, I am prioritizing consistency and partition tolerance over availability. The system utilized Redis consumer groups (which could easily scale to a Kakfa-level systme) and account-level locks to maintain consistency and ordering."
         }
       />
       <Project
