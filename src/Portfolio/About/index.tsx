@@ -141,7 +141,7 @@ const IconCircle = ({ scrollPosition }: { scrollPosition: number }) => {
 const SkillsList = styled.div`
   padding-top: 10px;
   grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-end: 7;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -156,50 +156,50 @@ const SkillGroup = styled.div`
   padding: 10px 0;
 `;
 
-const SkillGroupOne = styled(SkillGroup)`
-  padding-left: 50px;
-  ${mq[1]} {
-    padding-left: 15px;
-  }
-`;
+// const SkillGroupOne = styled(SkillGroup)`
+//   padding-left: 50px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
-const MiddleSkills = styled.div`
-  display: flex;
-  ${mq[1]} {
-    flex-direction: column;
-  }
-`;
+// const MiddleSkills = styled.div`
+//   display: flex;
+//   ${mq[1]} {
+//     flex-direction: column;
+//   }
+// `;
 
-const SkillGroupTwo = styled(SkillGroup)`
-  min-width: 50%;
-  padding-left: 25px;
-  ${mq[1]} {
-    padding-left: 15px;
-  }
-`;
+// const SkillGroupTwo = styled(SkillGroup)`
+//   min-width: 50%;
+//   padding-left: 25px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
-const SkillGroupThree = styled(SkillGroup)`
-  padding-left: 50px;
-  ${mq[1]} {
-    padding-left: 15px;
-  }
-`;
+// const SkillGroupThree = styled(SkillGroup)`
+//   padding-left: 50px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
-const SkillGroupFour = styled(SkillGroup)`
-  min-width: 50%;
-  padding-left: 100px;
-  ${mq[1]} {
-    padding-left: 15px;
-  }
-`;
+// const SkillGroupFour = styled(SkillGroup)`
+//   min-width: 50%;
+//   padding-left: 100px;
+//   ${mq[1]} {
+//     padding-left: 15px;
+//   }
+// `;
 
 const Skill = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   padding-left: 10px;
 `;
 
 const SkillSection = styled.div`
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: ${(p) => p.theme.colors.color_3};
 `;
@@ -252,35 +252,37 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
       <SkillsWrapper>
         <SkillCircleContainer>
           <SkillsList>
-            <SkillGroupOne>
-              <SkillSection>Rust</SkillSection>
+            <SkillGroup>
+              <SkillSection>Rust Ecosystem</SkillSection>
               <Skill>Actix-Web, Rocket, Axum</Skill>
-              <Skill>Diesel, Async-Graphql</Skill>
-              <Skill>WASM, Tokio</Skill>
+              <Skill>Diesel, async-graphql</Skill>
+              <Skill>wasm-pack, wasm-bindgen</Skill>
+              <Skill>Tokio Stack</Skill>
               <Skill>Anchor/Solana</Skill>
-            </SkillGroupOne>
-            <MiddleSkills>
-              <SkillGroupTwo>
-                <SkillSection>Javascript/TypeScript</SkillSection>
-                <Skill>Node, Express, NestJS</Skill>
-                <Skill>React, State Management</Skill>
-                <Skill>CSS-in-JS</Skill>
-              </SkillGroupTwo>
-            </MiddleSkills>
-            <SkillGroupThree>
-              <SkillSection>Python, AI & ML</SkillSection>
-              <Skill>RAG systems</Skill>
+            </SkillGroup>
+            {/* <MiddleSkills> */}
+            <SkillGroup>
+              <SkillSection>JS/TS Full-Stack</SkillSection>
+              <Skill>Node, Express, NestJS, TypeORM</Skill>
+              <Skill>React, Redux</Skill>
+              <Skill>React-Native</Skill>
+              <Skill>CSS, SCSS, CSS-in-JS etc...</Skill>
+            </SkillGroup>
+            {/* </MiddleSkills> */}
+            <SkillGroup>
+              <SkillSection>Python backend, AI & ML</SkillSection>
+              <Skill>FastAPI, Flask, SQLAlchemy</Skill>
               <Skill>Langchain, LangGraph, Llamachain</Skill>
-              <Skill>OpenAI, Anthropic</Skill>
-              <Skill>HuggingFace</Skill>
-            </SkillGroupThree>
-            <SkillGroupFour>
-              <SkillSection>Architecture</SkillSection>
+              <Skill>RAG systems, multi-agent</Skill>
+              <Skill>OpenAI API, HuggingFace</Skill>
+            </SkillGroup>
+            <SkillGroup>
+              <SkillSection>Architectural and System</SkillSection>
+              <Skill>AWS, NGINX</Skill>
+              <Skill>SQL, PostgreSQL, SQLite, MongoDB</Skill>
               <Skill>GraphQL, REST</Skill>
               <Skill>Docker, Kubernetes</Skill>
-              <Skill>NGINX, AWS, Security</Skill>
-              <Skill>PostgreSQL, MongoDB</Skill>
-            </SkillGroupFour>
+            </SkillGroup>
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
         </SkillCircleContainer>
