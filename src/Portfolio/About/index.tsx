@@ -65,7 +65,7 @@ const IconCircleGuide = styled.div<AboutProps>`
   -ms-transform: rotate(${(p) => p.scrollPosition / 10}deg);
   transform: rotate(${(p) => p.scrollPosition / 10}deg);
   ${mq[2]} {
-    left: 350%;
+    left: 200px; // was 350%
   }
 `;
 

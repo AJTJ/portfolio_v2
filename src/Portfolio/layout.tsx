@@ -36,9 +36,9 @@ export const SectionTitle = styled.div`
 export const zNav = 500;
 
 export const Button = styled.button`
-  font-size: 16px;
+  font-size: 15px;
   height: 30px;
-  width: 70px;
+  width: 80px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 17px;
   border: solid 1px ${(p) => p.theme.colors.color_3};
@@ -53,8 +53,8 @@ export const Button = styled.button`
   justify-content: center;
   align-items: center;
   ${mq[1]} {
-    width: 53px;
+    width: 56px;
     height: 24px;
-    font-size: 12px;
+    font-size: 11px;
   }
 `;

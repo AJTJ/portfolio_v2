@@ -188,7 +188,7 @@ export const ProjectsTitle = () => {
         <Caution>
           <CautionSpan>
             <strong>
-              I'm usually more active on my{" "}
+              I'm more active on my{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -201,13 +201,15 @@ export const ProjectsTitle = () => {
         </Caution>
         <Caution>
           <CautionSpan>
-            <strong>I can't share half of what I do...</strong>
+            <strong>
+              These projects are not necessarily production-level code.
+            </strong>
           </CautionSpan>
         </Caution>
         <Caution>
           <CautionSpan>
             <strong>
-              These may be <em>VERY</em> experimental
+              Rather, this is a collection of prototypes and experiments.
             </strong>
           </CautionSpan>
         </Caution>

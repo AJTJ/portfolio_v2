@@ -90,6 +90,7 @@ const Name = styled.div`
   }
   ${mq[1]} {
     grid-column: span 12;
+    padding-bottom: 25px;
     /* display: flex;
     justify-content: center; */
     text-align: center;
@@ -123,6 +124,10 @@ const Title = styled.div`
   grid-column-end: 11;
   font-size: 25px;
   padding-top: 20px;
+  ${mq[1]} {
+    font-size: 20px;
+    text-align: center;
+  }
 `;
 
 const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
