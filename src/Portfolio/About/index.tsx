@@ -43,13 +43,45 @@ const AboutWrapper = styled.div`
   padding: 50px 0 30px;
 `;
 
+const CIRCLE_SIZE = 340; // smaller circle for tighter icons
+const ICON_SIZE = 50; // larger icons
+const ICON_COUNT = toolArray.length;
+
 const IconCircleContainer = styled.div`
-  padding-top: 75px;
-  grid-column: span 6;
   position: relative;
-  ${mq[2]} {
-    grid-column: span 1;
+  width: ${CIRCLE_SIZE}px;
+  height: ${CIRCLE_SIZE}px;
+  margin: 0 auto;
+`;
+
+const IconCircleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  @media (max-width: 600px) {
+    width: ${CIRCLE_SIZE / 2}px;
+    /* overflow: hidden; */
+    margin-left: 0;
+    margin-right: auto;
   }
+`;
+
+const RotatingCircle = styled.div<{ scrollPosition: number }>`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  transform: rotate(${(p) => p.scrollPosition / 10}deg);
+`;
+
+const Icon = styled.img<{ x: number; y: number; rotation: number }>`
+  position: absolute;
+  width: ${ICON_SIZE}px;
+  height: ${ICON_SIZE}px;
+  left: ${(p) => p.x}px;
+  top: ${(p) => p.y}px;
+  pointer-events: none;
+  transform: rotate(${(p) => p.rotation}deg);
 `;
 
 interface AboutProps {
@@ -118,23 +150,26 @@ const CircleComponent = ({ givenArray }: { givenArray: string[] }) => {
   return child;
 };
 
-// const CircleComponent = ({givenArray}) => {
-//     return myArray.slice().reverse().reduce((child, currentImg) => {
-//         return <InnerDiv>
-//             <InnerImg src={currentImg} alt="" />
-//             {child}
-//         </InnerDiv>
-//     }, null)
-// }
-
 const IconCircle = ({ scrollPosition }: { scrollPosition: number }) => {
+  const radius = (CIRCLE_SIZE - ICON_SIZE) / 2;
+  const circleRotation = scrollPosition / 10;
   return (
-    <IconCircleContainer>
-      <IconCircleGuide scrollPosition={scrollPosition}>
-        {/* {circleComponent(toolArray)} */}
-        <CircleComponent givenArray={toolArray} />
-      </IconCircleGuide>
-    </IconCircleContainer>
+    <IconCircleWrapper>
+      <IconCircleContainer>
+        <RotatingCircle scrollPosition={scrollPosition}>
+          {toolArray.map((icon, i) => {
+            const angle = (2 * Math.PI * i) / ICON_COUNT;
+            const x = radius + radius * Math.cos(angle) - ICON_SIZE / 2;
+            const y = radius + radius * Math.sin(angle) - ICON_SIZE / 2;
+            // Only counter-rotate the icon so it is always upright relative to the page
+            const rotation = -circleRotation;
+            return (
+              <Icon key={i} src={icon} x={x} y={y} rotation={rotation} alt="" />
+            );
+          })}
+        </RotatingCircle>
+      </IconCircleContainer>
+    </IconCircleWrapper>
   );
 };
 
@@ -223,7 +258,7 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
         <MarginedContainer>
           <SectionTitle>About Me</SectionTitle>
           <Text>
-            Hi, I'm Aaron. I'm a full stack engineer and creative code
+            Hi, I'm Aaron. I'm a full stack systems engineer and creative code
             enthusiast.
           </Text>
           <Text>I have a passion for scalable, performant architecture.</Text>
@@ -270,18 +305,18 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
             </SkillGroup>
             {/* </MiddleSkills> */}
             <SkillGroup>
-              <SkillSection>Python backend, AI & ML</SkillSection>
-              <Skill>FastAPI, Flask, SQLAlchemy</Skill>
-              <Skill>Langchain, LangGraph, Llamachain</Skill>
-              <Skill>RAG systems, multi-agent</Skill>
-              <Skill>OpenAI API, HuggingFace</Skill>
-            </SkillGroup>
-            <SkillGroup>
               <SkillSection>Architectural and System</SkillSection>
               <Skill>AWS, NGINX</Skill>
               <Skill>SQL, PostgreSQL, SQLite, MongoDB</Skill>
               <Skill>GraphQL, REST</Skill>
               <Skill>Docker, Kubernetes</Skill>
+            </SkillGroup>
+            <SkillGroup>
+              <SkillSection>Python backend, AI & ML</SkillSection>
+              <Skill>RAG systems, multi-agent</Skill>
+              <Skill>OpenAI API, HuggingFace</Skill>
+              <Skill>FastAPI, Flask, SQLAlchemy</Skill>
+              <Skill>Langchain, LangGraph, Llamachain</Skill>
             </SkillGroup>
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />

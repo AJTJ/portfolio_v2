@@ -4,7 +4,6 @@ import { MarginedContainer, zNav, Button as NavButtonImport } from "../layout";
 import { mq } from "../theme";
 import linked from "../assets/linked.png";
 import github from "../assets/github.png";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 interface NavProps {
   scrollPosition: number;
@@ -29,13 +28,12 @@ const NavContainer = styled(MarginedContainer)`
   height: 60px;
 `;
 
-const NavButtonLink = styled(Link)``;
-
-const NavButton = NavButtonImport.withComponent(NavButtonLink);
+const NavButton = styled(NavButtonImport.withComponent("a"))`
+  text-decoration: none;
+`;
 
 const First = styled(NavButton)`
   grid-column-start: 8;
-  /* grid-column-start: 9; */
   ${mq[1]} {
     grid-column-start: 5;
   }
@@ -55,7 +53,6 @@ const LinkImgFirst = styled(LinkImg)`
 `;
 
 const LinkImgWrapper = styled.div`
-  /* height: 55px; */
   grid-column-start: 11;
   display: flex;
   justify-content: center;
@@ -82,23 +79,20 @@ const Name = styled.a`
   grid-column-start: 2;
   grid-column-end: 4;
   cursor: pointer;
-  /* padding-left: 10px; */
 `;
 
 const Nav = ({ scrollPosition }: { scrollPosition: number }) => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <NavWrapper {...{ scrollPosition }}>
       <NavContainer>
-        <Name onClick={scroll.scrollToTop}>AJ</Name>
-        <First offset={-50} smooth={true} to="about">
-          About
-        </First>
-        <NavButton offset={-50} smooth={true} to="projects">
-          Projects
-        </NavButton>
-        <NavButton smooth={true} to="contact">
-          Contact
-        </NavButton>
+        <Name onClick={scrollToTop}>AJ</Name>
+        <First href="#about">About</First>
+        <NavButton href="#projects">Projects</NavButton>
+        <NavButton href="#contact">Contact</NavButton>
         <LinkImgWrapper>
           <LinkImgContainer
             target="_blank"

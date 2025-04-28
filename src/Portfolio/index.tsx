@@ -5,7 +5,6 @@ import Nav from "./Nav";
 import About from "./About";
 import Project, { ProjectsTitle } from "./Project";
 import Contact from "./Contact";
-import { Element } from "react-scroll";
 
 //PROJECT IMAGES
 import trading_img from "./assets/high_freq_img.jpeg";
@@ -18,12 +17,13 @@ import auction_img from "./assets/auction.jpeg";
 import roll from "./assets/roll.jpeg";
 
 const PortfolioContainer = styled.div`
-  /* min-height: 5000px; */
-  overflow: hidden;
-  -moz-transform: rotate(0.02deg);
-  /* background-color: black; */
+  scroll-behavior: smooth;
 `;
-//
+
+const Section = styled.section`
+  scroll-margin-top: 80px; // Adjust this value based on your header height
+`;
+
 const Portfolio = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -40,12 +40,12 @@ const Portfolio = () => {
     <PortfolioContainer>
       <Nav {...{ scrollPosition }} />
       <Hero {...{ scrollPosition }} />
-      <Element name="about">
+      <Section id="about">
         <About {...{ scrollPosition }} />
-      </Element>
-      <Element name="projects">
+      </Section>
+      <Section id="projects">
         <ProjectsTitle />
-      </Element>
+      </Section>
       <Project
         projTitle={"High Frequency Trading Experiments"}
         ghLinks={[
@@ -95,7 +95,6 @@ const Portfolio = () => {
         projCopy={
           "A custom CMS built using react-static, NetlifyCMS and distributed over Netlify for a neat, git-based system."
         }
-        // reversed={true}
       />
       <Project
         projTitle={"Free Source"}
@@ -104,7 +103,6 @@ const Portfolio = () => {
         projCopy={
           "A RESTful server that records freediving training and performance information.  Built with NestJS, GraphQL, PostgreSQL, TypeORM, PassportJS, and Redis. Currently building out a React Native app as well as web front-end."
         }
-        // reversed={true}
       />
       <Project
         projTitle={"Solana Dutch Auction"}
@@ -113,7 +111,6 @@ const Portfolio = () => {
         projCopy={
           "A dutch auction program built with Anchor for the Solana blockchain. Programs on the blockchain are stateless, small, and secure."
         }
-        // reversed={true}
       />
       <Project
         projTitle={"Tensor Sentence Compare"}
@@ -122,7 +119,6 @@ const Portfolio = () => {
         projCopy={
           "A node implementation of TensorFlow's Universal Sentence Encoder that compares the similarity of a sentence and a response based on dimensional embeddings. A monorepo with react as a front-end."
         }
-        // reversed={true}
       />
       <Project
         projTitle={"Gravity Ball V2"}
@@ -131,12 +127,11 @@ const Portfolio = () => {
         projCopy={
           "A physics-based game made with BabylonJS. Don't fall off the platform!"
         }
-        // reversed={true}
       />
 
-      <Element name="contact">
+      <Section id="contact">
         <Contact />
-      </Element>
+      </Section>
     </PortfolioContainer>
   );
 };

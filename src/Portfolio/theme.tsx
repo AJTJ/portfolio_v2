@@ -1,9 +1,7 @@
-/** @jsx jsx */
-import { jsx } from "@emotion/react";
-// import React from "react";
 import facepaint from "facepaint";
 import { Global as EmoGlobal, css, Theme } from "@emotion/react";
 import "@emotion/react";
+import React from "react";
 
 const bps = ["400", "600", "800", "1060"];
 

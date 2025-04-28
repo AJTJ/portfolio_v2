@@ -5,7 +5,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { MarginedContainer, SectionTitle, Button } from "../layout";
 
 const ContactWrapper = styled.div`
-  padding: 75px 0 150px;
+  padding: 75px 0 50px;
 `;
 
 const FormContainer = styled(MarginedContainer)``;
