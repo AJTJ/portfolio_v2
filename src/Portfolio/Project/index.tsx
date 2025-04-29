@@ -92,6 +92,10 @@ const ProjTitleContainer = styled.p`
   padding-bottom: 20px;
 `;
 
+const ProjectCopy = styled.p`
+  font-size: 16px;
+`;
+
 interface GhObject {
   title?: string;
   link: string;
@@ -136,7 +140,9 @@ const Project = ({
             <ProjTitleContainer>
               {projTitle || "Project Title"}
             </ProjTitleContainer>
-            <p>{projCopy || "A bunch of copy about the project"}</p>
+            <ProjectCopy>
+              {projCopy || "A bunch of copy about the project"}
+            </ProjectCopy>
             <ProjectLinks>
               {/* {ghLink && (
                 <Link href={ghLink} target="_blank" rel="noopener noreferrer">

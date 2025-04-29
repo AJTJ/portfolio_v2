@@ -8,7 +8,9 @@ const ContactWrapper = styled.div`
   padding: 75px 0 50px;
 `;
 
-const FormContainer = styled(MarginedContainer)``;
+const FormContainer = styled(MarginedContainer)`
+  padding-top: 25px;
+`;
 
 const Form = styled.form`
   display: flex;
@@ -22,6 +24,10 @@ const Form = styled.form`
     background: ${(p) => p.theme.colors.color_1};
     border-width: 1px;
     border-radius: 5px;
+  }
+  ,
+  textarea {
+    height: 100px;
   }
   button {
     align-self: flex-start;
@@ -71,7 +77,7 @@ const ContactForm = () => {
 
   return (
     <Form onSubmit={myHandleSubmit}>
-      <label htmlFor="email">Email Address 🙂</label>
+      <label htmlFor="email">Email</label>
       <input id="email" type="email" name="email" />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <label htmlFor="message">Message</label>

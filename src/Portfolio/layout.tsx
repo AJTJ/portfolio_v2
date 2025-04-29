@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { mq } from "./theme";
 
 export const Text = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   /* grid-column: span 12; */
   grid-column-start: 2;
   grid-column-end: 12;
@@ -28,7 +28,7 @@ export const MarginedContainer = styled(Grid)`
 export const SectionTitle = styled.div`
   grid-column-start: 2;
   grid-column-end: 9;
-  font-size: 40px;
+  font-size: 30px;
   color: ${(p) => p.theme.colors.color_3};
   padding-top: 30px;
 `;

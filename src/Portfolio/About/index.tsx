@@ -5,6 +5,7 @@ import { mq } from "../theme";
 
 //icons
 import rust from "./icons/rust_logo.png";
+import tokio from "./icons/tokio.png";
 import actix from "./icons/actix_logo.png";
 import wasm from "./icons/black_wasm.png";
 import react from "./icons/react.png";
@@ -20,11 +21,12 @@ import python from "./icons/python.png";
 
 const toolArray = [
   rust,
+  tokio,
   actix,
   wasm,
   react,
   node,
-  kube,
+  // kube,
   docker,
   three,
   js,
@@ -176,7 +178,7 @@ const IconCircle = ({ scrollPosition }: { scrollPosition: number }) => {
 const SkillsList = styled.div`
   padding-top: 10px;
   grid-column-start: 2;
-  grid-column-end: 7;
+  grid-column-end: 8;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -229,12 +231,12 @@ const SkillGroup = styled.div`
 // `;
 
 const Skill = styled.div`
-  font-size: 16px;
+  font-size: 12px;
   padding-left: 10px;
 `;
 
 const SkillSection = styled.div`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   color: ${(p) => p.theme.colors.color_3};
 `;
@@ -289,34 +291,34 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
           <SkillsList>
             <SkillGroup>
               <SkillSection>Rust Ecosystem</SkillSection>
-              <Skill>Actix-Web, Rocket, Axum</Skill>
-              <Skill>Diesel, async-graphql</Skill>
-              <Skill>wasm-pack, wasm-bindgen</Skill>
+              <Skill>Actix-Web - Rocket - Axum</Skill>
+              <Skill>Diesel - async-graphql</Skill>
+              <Skill>wasm-pack - wasm-bindgen</Skill>
               <Skill>Tokio Stack</Skill>
               <Skill>Anchor/Solana</Skill>
             </SkillGroup>
             {/* <MiddleSkills> */}
             <SkillGroup>
               <SkillSection>JS/TS Full-Stack</SkillSection>
-              <Skill>Node, Express, NestJS, TypeORM</Skill>
-              <Skill>React, Redux</Skill>
+              <Skill>Node - Express - NestJS - TypeORM</Skill>
+              <Skill>React - Redux</Skill>
               <Skill>React-Native</Skill>
-              <Skill>CSS, SCSS, CSS-in-JS etc...</Skill>
+              <Skill>CSS - CSS-in-JS</Skill>
             </SkillGroup>
             {/* </MiddleSkills> */}
             <SkillGroup>
               <SkillSection>Architectural and System</SkillSection>
-              <Skill>AWS, NGINX</Skill>
-              <Skill>SQL, PostgreSQL, SQLite, MongoDB</Skill>
-              <Skill>GraphQL, REST</Skill>
-              <Skill>Docker, Kubernetes</Skill>
+              <Skill>AWS - NGINX</Skill>
+              <Skill>SQL - PostgreSQL - SQLite - MongoDB</Skill>
+              <Skill>GraphQL - REST</Skill>
+              <Skill>Docker</Skill>
             </SkillGroup>
             <SkillGroup>
-              <SkillSection>Python backend, AI & ML</SkillSection>
-              <Skill>RAG systems, multi-agent</Skill>
-              <Skill>OpenAI API, HuggingFace</Skill>
-              <Skill>FastAPI, Flask, SQLAlchemy</Skill>
-              <Skill>Langchain, LangGraph, Llamachain</Skill>
+              <SkillSection>Python backend - AI & ML</SkillSection>
+              <Skill>RAG systems - multi-agent</Skill>
+              <Skill>OpenAI API - HuggingFace</Skill>
+              <Skill>FastAPI - Flask - SQLAlchemy</Skill>
+              <Skill>Langchain - LangGraph - Llamachain</Skill>
             </SkillGroup>
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
