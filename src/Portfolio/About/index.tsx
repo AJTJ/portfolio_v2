@@ -310,7 +310,7 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
               <SkillSection>Architectural and System</SkillSection>
               <Skill>AWS - NGINX</Skill>
               <Skill>SQL - PostgreSQL - SQLite - MongoDB</Skill>
-              <Skill>GraphQL - REST</Skill>
+              <Skill>GraphQL - REST - gRPC</Skill>
               <Skill>Docker</Skill>
             </SkillGroup>
             <SkillGroup>
