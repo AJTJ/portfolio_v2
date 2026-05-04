@@ -143,8 +143,9 @@ const Hero = ({ scrollPosition }: { scrollPosition: number }) => {
       </NameContainer>
       <MarginedContainer>
         <Title>
-          Systems Developer with a passion for scalable and performant
-          architecture.
+          Senior software engineer with 10+ years building scalable full-stack
+          products, backend infrastructure, and blockchain systems using
+          AI-augmented development workflows.
         </Title>
         {/* <Title>Programming Polyglot Proliferating Poignant Prose</Title> */}
       </MarginedContainer>

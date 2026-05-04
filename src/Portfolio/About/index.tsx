@@ -260,10 +260,9 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
         <MarginedContainer>
           <SectionTitle>About Me</SectionTitle>
           <Text>
-            Hi, I'm Aaron. I'm a full stack systems engineer and creative code
-            enthusiast.
+            Hi, I'm Aaron. I'm a Rust-focused polyglot, fluent in
+            TypeScript/JavaScript and Python.
           </Text>
-          <Text>I have a passion for scalable, performant architecture.</Text>
           <Text>I dig into all sorts of languages and tools.</Text>
           <Text>
             Check out my{" "}
@@ -290,35 +289,32 @@ const About = ({ scrollPosition }: { scrollPosition: number }) => {
         <SkillCircleContainer>
           <SkillsList>
             <SkillGroup>
-              <SkillSection>Rust Ecosystem</SkillSection>
-              <Skill>Actix-Web - Rocket - Axum</Skill>
-              <Skill>Diesel - async-graphql</Skill>
-              <Skill>wasm-pack - wasm-bindgen</Skill>
-              <Skill>Tokio Stack</Skill>
-              <Skill>Anchor/Solana</Skill>
+              <SkillSection>Backend & APIs</SkillSection>
+              <Skill>Axum - Actix-Web - Rocket</Skill>
+              <Skill>gRPC - REST - GraphQL</Skill>
+              <Skill>Node - NestJS - FastAPI - Flask</Skill>
+              <Skill>AI/ML APIs: OpenAI - HuggingFace - RAG - Langchain</Skill>
             </SkillGroup>
-            {/* <MiddleSkills> */}
             <SkillGroup>
-              <SkillSection>JS/TS Full-Stack</SkillSection>
-              <Skill>Node - Express - NestJS - TypeORM</Skill>
+              <SkillSection>Data & Infrastructure</SkillSection>
+              <Skill>PostgreSQL - SQLite - MongoDB - ClickHouse</Skill>
+              <Skill>AWS - Docker - NGINX</Skill>
+              <Skill>Terraform - Ansible</Skill>
+              <Skill>Prometheus - Grafana</Skill>
+              <Skill>Diesel - sqlx - TypeORM</Skill>
+            </SkillGroup>
+            <SkillGroup>
+              <SkillSection>Cross-Platform & Frontend</SkillSection>
+              <Skill>wasm-pack - wasm-bindgen</Skill>
               <Skill>React - Redux</Skill>
               <Skill>React-Native</Skill>
-              <Skill>CSS - CSS-in-JS</Skill>
-            </SkillGroup>
-            {/* </MiddleSkills> */}
-            <SkillGroup>
-              <SkillSection>Architectural and System</SkillSection>
-              <Skill>AWS - NGINX</Skill>
-              <Skill>SQL - PostgreSQL - SQLite - MongoDB</Skill>
-              <Skill>GraphQL - REST - gRPC</Skill>
-              <Skill>Docker</Skill>
+              <Skill>Vite - Webpack</Skill>
             </SkillGroup>
             <SkillGroup>
-              <SkillSection>Python backend - AI & ML</SkillSection>
-              <Skill>RAG systems - multi-agent</Skill>
-              <Skill>OpenAI API - HuggingFace</Skill>
-              <Skill>FastAPI - Flask - SQLAlchemy</Skill>
-              <Skill>Langchain - LangGraph - Llamachain</Skill>
+              <SkillSection>Systems & Performance</SkillSection>
+              <Skill>Linux: syscalls - process lifecycle</Skill>
+              <Skill>Atomics - lock-free structures - shared-memory IPC</Skill>
+              <Skill>eBPF - USDT - perf - flamegraphs</Skill>
             </SkillGroup>
           </SkillsList>
           <IconCircle {...{ scrollPosition }} />
